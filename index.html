@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ME4ZYX5XXK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ME4ZYX5XXK');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Aloé Vera – Cidade Velha, Cabo Verde</title>
+<meta name="description" content="Casa rústica com piscina, vista para o mar e brisa constante em Cidade Velha, Cabo Verde. Reserve diretamente com Sofia.">
+<style>
+  :root {
+    --blue:         #1E6FA8;   /* azul mediterrânico */
+    --blue-mid:     #2B86C5;
+    --blue-light:   #EDF5FC;   /* fundo azul muito claro */
+    --blue-dark:    #14487A;
+    --terracota:    #C1694F;
+    --terracota-dark: #A0533C;
+    --sand:         #E8D5B0;
+    --sand-light:   #F8F4EB;
+    --white-warm:   #FDFCF8;
+    --stone:        #8B7355;
+    --text-dark:    #0F2A42;
+    --text-mid:     #3A5A72;
+    --green-wood:   #5A7D3C;   /* verde madeira natural */
+    --green-wood-light: #6B8F4A;
+    /* aliases para compatibilidade */
+    --green:        #5A7D3C;
+    --green-mid:    #6B8F4A;
+    --green-light:  #EDF5FC;
+    --navy:         #1E6FA8;
+    --navy-light:   #2B86C5;
+    --radius: 12px;
+    --shadow: 0 4px 24px rgba(0,0,0,0.09);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Georgia', serif; background: #fff; color: var(--text-dark); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(20,72,122,0.97); backdrop-filter: blur(8px);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px; height: 60px;
+  }
+  .nav-logo { color: #fff; font-size: 1.1rem; font-weight: bold; letter-spacing: 1px; text-decoration: none; }
+  .nav-logo span { color: #fff; }
+  .nav-links { display: flex; gap: 20px; align-items: center; }
+  .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.85rem; font-family: sans-serif; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--sand); }
+  .lang-switcher { display: flex; gap: 6px; }
+  .lang-btn {
+    background: none; border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.7);
+    padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-family: sans-serif; transition: all 0.2s;
+  }
+  .lang-btn.active, .lang-btn:hover { background: var(--terracota); border-color: var(--terracota); color: #fff; }
+  .nav-menu-btn { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
+
+  /* HERO */
+  .hero { display: block; padding: 0; background: #fff; }
+  .hero-bg-pattern { display: none; }
+  .hero-photo-placeholder {
+    position: relative; width: 100%; overflow: hidden; background: #fff; max-height: 70vh;
+  }
+  .hero-photo-placeholder img {
+    width: 100%; height: auto; display: block; object-fit: cover; max-height: 70vh;
+  }
+  .hero-overlay {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 45%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(15,35,65,0.78) 100%);
+    pointer-events: none;
+  }
+  .hero-photo-text {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 28px 32px 32px; text-align: center;
+    z-index: 2;
+  }
+  .hero-photo-text h1 {
+    font-size: clamp(2rem, 5vw, 3.4rem); color: #fff; line-height: 1.1; margin-bottom: 6px;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.5);
+  }
+  .hero-photo-text h1 span { color: #fff; }
+  .hero-photo-text p {
+    font-family: sans-serif; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem;
+    color: rgba(255,255,255,0.88);
+  }
+  .hero-subtitle-small {
+    font-size: 0.7rem !important; letter-spacing: 1px !important;
+    margin-top: 5px; color: rgba(255,255,255,0.7) !important;
+  }
+
+  /* Painel de info — abaixo da foto, fundo branco */
+  .hero-content {
+    background: #fff;
+    text-align: center; padding: 36px 28px 48px;
+    max-width: 100%;
+  }
+  .hero-tag {
+    display: inline-block; background: var(--blue); color: #fff;
+    font-size: 0.75rem; font-family: sans-serif; letter-spacing: 2px; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 20px; margin-bottom: 14px;
+  }
+  .hero-title { display: none; } /* título já está na foto */
+  .hero-subtitle { font-size: clamp(0.95rem, 2vw, 1.05rem); color: var(--text-mid); margin-bottom: 24px; font-style: italic; line-height: 1.6; }
+  .hero-stats {
+    display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px;
+  }
+  .hero-stat {
+    background: var(--blue-light); border: 1px solid rgba(43,110,168,0.15);
+    padding: 10px 18px; border-radius: 8px; text-align: center; color: var(--text-dark);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .hero-stat-num { font-size: 1.3rem; font-weight: bold; color: var(--blue); display: block; }
+  .hero-stat-label { font-size: 0.68rem; font-family: sans-serif; color: var(--text-mid); text-transform: uppercase; letter-spacing: 1px; }
+  .hero-badges {
+    display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 26px;
+  }
+  .hero-badge {
+    background: var(--blue-light); border: 1px solid rgba(43,110,168,0.2);
+    color: var(--blue); padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-family: sans-serif;
+  }
+  .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-whatsapp {
+    background: #25D366; color: #fff; text-decoration: none;
+    padding: 14px 28px; border-radius: 8px; font-family: sans-serif; font-weight: bold; font-size: 1rem;
+    display: flex; align-items: center; gap: 8px; transition: all 0.2s; box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+  }
+  .btn-whatsapp:hover { background: #1ebe58; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.5); }
+  .btn-outline {
+    background: transparent; color: var(--blue); text-decoration: none;
+    padding: 14px 28px; border-radius: 8px; font-family: sans-serif; font-size: 0.95rem;
+    border: 2px solid var(--blue); transition: all 0.2s;
+  }
+  .btn-outline:hover { background: var(--blue); color: #fff; }
+  .hero-rating {
+    margin-top: 22px; color: var(--text-mid); font-family: sans-serif; font-size: 0.85rem;
+  }
+  .stars { color: #E8A020; letter-spacing: 2px; }
+
+  /* SECTIONS */
+  section { padding: 80px 24px; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-tag {
+    font-family: sans-serif; font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--green-wood); margin-bottom: 10px;
+  }
+  .section-title { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--blue); margin-bottom: 16px; }
+  .section-divider { width: 50px; height: 3px; background: var(--green-wood); margin-bottom: 32px; border-radius: 2px; }
+
+  /* DIFERENCIAIS */
+  #diferenciais { background: #F0F7FD; }
+  .diff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .diff-card {
+    background: #fff; border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow);
+    border-left: 4px solid var(--green-wood); transition: transform 0.2s;
+  }
+  .diff-card:hover { transform: translateY(-4px); }
+  .diff-icon { font-size: 2rem; margin-bottom: 10px; }
+  .diff-title { font-size: 1rem; font-weight: bold; color: var(--navy); margin-bottom: 6px; font-family: sans-serif; }
+  .diff-text { font-size: 0.88rem; color: var(--text-mid); line-height: 1.6; font-family: sans-serif; }
+
+  /* GALERIA */
+  #galeria { background: var(--white-warm); }
+  .gallery-cats { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
+  .gallery-cat-btn {
+    padding: 7px 16px; border-radius: 20px; border: 2px solid var(--green-wood);
+    background: none; color: var(--green-wood); font-family: sans-serif; font-size: 0.82rem;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .gallery-cat-btn.active, .gallery-cat-btn:hover { background: var(--green-wood); color: #fff; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .gallery-item {
+    aspect-ratio: 4/3; border-radius: var(--radius); overflow: hidden;
+    background: var(--sand); position: relative; cursor: pointer;
+  }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+  .gallery-item:hover img { transform: scale(1.05); }
+  .gallery-placeholder {
+    width: 100%; height: 100%; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 8px;
+    background: linear-gradient(135deg, var(--sand) 0%, #d4c09a 100%);
+    color: var(--stone); font-family: sans-serif;
+  }
+  .gallery-placeholder-icon { font-size: 2rem; }
+  .gallery-placeholder-text { font-size: 0.78rem; text-align: center; padding: 0 10px; line-height: 1.4; opacity: 0.8; }
+  .gallery-add-note {
+    margin-top: 20px; padding: 14px 20px; background: rgba(193,105,79,0.08);
+    border: 1px dashed var(--terracota); border-radius: var(--radius);
+    font-family: sans-serif; font-size: 0.82rem; color: var(--terracota); text-align: center;
+  }
+
+  /* AVALIAÇÕES */
+  #avaliacoes { background: #F0EBE0; color: var(--text-dark); }
+  #avaliacoes .section-title { color: var(--navy); }
+  #avaliacoes .section-tag { color: var(--terracota); }
+  .rating-hero { text-align: center; margin-bottom: 50px; }
+  .rating-big { font-size: 5rem; font-weight: bold; color: var(--terracota); line-height: 1; }
+  .rating-sub { font-family: sans-serif; color: var(--text-mid); margin-top: 6px; font-size: 0.9rem; }
+  .rating-cats { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+  .rating-cat { text-align: center; font-family: sans-serif; font-size: 0.8rem; color: var(--text-mid); }
+  .rating-cat-score { font-size: 1.1rem; font-weight: bold; color: var(--navy); display: block; }
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .review-card {
+    background: #fff; border: 1px solid rgba(0,0,0,0.07);
+    border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow);
+  }
+  .review-stars { color: #E8A020; font-size: 0.9rem; margin-bottom: 12px; }
+  .review-text { font-style: italic; color: var(--text-mid); line-height: 1.7; font-size: 0.92rem; margin-bottom: 14px; }
+  .review-author { font-family: sans-serif; font-size: 0.78rem; color: #aaa; }
+  .review-airbnb-link {
+    display: inline-block; margin-top: 30px; color: var(--terracota);
+    font-family: sans-serif; font-size: 0.85rem; text-decoration: none;
+    border-bottom: 1px solid rgba(193,105,79,0.4); padding-bottom: 2px;
+  }
+  .review-airbnb-link:hover { color: var(--terracota-dark); border-color: var(--terracota-dark); }
+
+  /* ANFITRIÃO */
+  #anfitriao { background: var(--sand-light); }
+  .host-wrap { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: center; }
+  .host-photo-wrap { text-align: center; }
+  .host-photo {
+    width: 200px; height: 200px; border-radius: 50%; margin: 0 auto 16px;
+    background: linear-gradient(135deg, var(--terracota), var(--stone));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 5rem; border: 5px solid #fff; box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .host-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .host-name { font-size: 1.3rem; color: var(--navy); font-weight: bold; }
+  .host-badges { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
+  .host-badge {
+    background: var(--green-wood); color: #fff; font-family: sans-serif;
+    font-size: 0.72rem; padding: 4px 10px; border-radius: 12px;
+  }
+  .host-bio { font-size: 1rem; line-height: 1.8; color: var(--text-mid); margin-bottom: 20px; }
+  .host-stats { display: flex; gap: 24px; flex-wrap: wrap; }
+  .host-stat { font-family: sans-serif; }
+  .host-stat-num { font-size: 1.5rem; font-weight: bold; color: var(--terracota); display: block; }
+  .host-stat-label { font-size: 0.78rem; color: var(--text-mid); }
+
+  /* REGRAS E RESERVA */
+  #reserva { background: var(--white-warm); }
+  .reserva-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .reserva-card {
+    background: #fff; border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow);
+  }
+  .reserva-card-title { font-size: 1.1rem; color: var(--navy); margin-bottom: 20px; font-weight: bold; display: flex; align-items: center; gap: 8px; }
+  .step { display: flex; gap: 14px; margin-bottom: 16px; align-items: flex-start; font-family: sans-serif; }
+  .step-num {
+    background: var(--green-wood); color: #fff; width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold; flex-shrink: 0;
+  }
+  .step-text { font-size: 0.88rem; color: var(--text-mid); line-height: 1.5; padding-top: 3px; }
+  .step-text strong { color: var(--text-dark); }
+  .rules-list { list-style: none; font-family: sans-serif; }
+  .rules-list li { padding: 8px 0; border-bottom: 1px solid var(--sand); font-size: 0.88rem; color: var(--text-mid); display: flex; align-items: flex-start; gap: 8px; }
+  .rules-list li:last-child { border-bottom: none; }
+  .rule-icon { flex-shrink: 0; font-size: 1rem; }
+  .payment-methods { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+  .payment-badge {
+    background: var(--sand-light); border: 1px solid var(--sand);
+    padding: 6px 14px; border-radius: 8px; font-family: sans-serif; font-size: 0.82rem; color: var(--text-mid);
+  }
+  .checkin-times { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+  .time-box {
+    background: var(--sand-light); border-radius: 8px; padding: 12px; text-align: center; font-family: sans-serif;
+  }
+  .time-box-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-mid); margin-bottom: 4px; }
+  .time-box-time { font-size: 1.4rem; color: var(--navy); font-weight: bold; }
+
+  /* FORMULÁRIO RESERVA RÁPIDA */
+  .reserva-form-wrap {
+    margin-top: 36px;
+    background: #fff; border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow);
+  }
+  .reserva-form-wrap .reserva-card-title { margin-bottom: 6px; }
+  .reserva-form-subtitle {
+    font-family: sans-serif; font-size: 0.85rem; color: var(--text-mid); margin-bottom: 22px;
+  }
+  .reserva-form-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;
+  }
+  .reserva-form-grid .full { grid-column: 1 / -1; }
+  .reserva-form-wrap input,
+  .reserva-form-wrap select {
+    width: 100%; padding: 11px 14px; border-radius: 8px; border: 1px solid #dce4ed;
+    font-family: sans-serif; font-size: 0.88rem; color: var(--text-dark);
+    background: var(--sand-light); transition: border-color 0.2s;
+    box-sizing: border-box;
+  }
+  .reserva-form-wrap input:focus,
+  .reserva-form-wrap select:focus,
+  .reserva-form-wrap textarea:focus { outline: none; border-color: var(--blue-mid); background: #fff; }
+  .reserva-form-wrap input::placeholder,
+  .reserva-form-wrap textarea::placeholder { color: #a0b0c0; }
+  .reserva-form-wrap textarea {
+    width: 100%; padding: 11px 14px; border-radius: 8px; border: 1px solid #dce4ed;
+    font-family: sans-serif; font-size: 0.88rem; color: var(--text-dark);
+    background: var(--sand-light); transition: border-color 0.2s;
+    box-sizing: border-box; resize: vertical; min-height: 80px; line-height: 1.5;
+  }
+  .reserva-contact-label {
+    font-family: sans-serif; font-size: 0.8rem; color: var(--text-mid); margin-bottom: 10px; display: block;
+  }
+  .reserva-contact-options { display: flex; gap: 24px; margin-bottom: 20px; flex-wrap: wrap; align-items: center; }
+  .reserva-contact-options label {
+    font-family: sans-serif; font-size: 0.88rem; color: var(--text-dark);
+    display: flex; align-items: center; gap: 8px; cursor: pointer;
+    line-height: 1; white-space: nowrap;
+  }
+  .reserva-contact-options input[type="radio"] {
+    flex-shrink: 0; width: 16px; height: 16px; margin: 0;
+    accent-color: var(--blue); cursor: pointer;
+  }
+  .btn-reserva-send {
+    background: var(--blue); color: #fff; width: 100%; padding: 14px;
+    border: none; border-radius: 8px; font-weight: bold; cursor: pointer;
+    font-size: 0.95rem; font-family: sans-serif; letter-spacing: 0.5px;
+    transition: background 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .btn-reserva-send:hover { background: var(--blue-dark); }
+
+  /* LOCALIZAÇÃO */
+  #localizacao { background: var(--sand-light); }
+  .map-embed {
+    border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+    height: 380px; width: 100%;
+  }
+  .map-embed iframe { width: 100%; height: 100%; border: 0; }
+  .location-info { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+  .location-card {
+    background: #fff; border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow);
+    font-family: sans-serif;
+  }
+  .location-card-title { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 1px; color: var(--terracota); margin-bottom: 8px; }
+  .location-card-text { font-size: 0.88rem; color: var(--text-mid); line-height: 1.8; }
+  .flexible-note { font-family: sans-serif; font-size: 0.7rem; color: var(--terracota); margin-top: 6px; text-align: center; }
+  .security-note { margin-top: 20px; background: #E8F5E9; border-radius: var(--radius); padding: 15px; text-align: center; font-family: sans-serif; font-size: 0.85rem; color: var(--green-wood); }
+
+  /* CONTATO */
+  #contato { background: linear-gradient(135deg, #1E6FA8 0%, #0F3D6B 100%); color: #fff; text-align: center; }
+  #contato .section-title { color: #fff; }
+  #contato .section-tag { color: rgba(255,255,255,0.75); }
+  #contato .section-divider { margin: 0 auto 32px; background: rgba(255,255,255,0.4); }
+  .contato-text { font-family: sans-serif; color: rgba(255,255,255,0.9); font-size: 1rem; max-width: 560px; margin: 0 auto 36px; line-height: 1.7; }
+  .cta-big {
+    background: #25D366; color: #fff; text-decoration: none;
+    padding: 18px 40px; border-radius: 10px; font-family: sans-serif; font-weight: bold; font-size: 1.15rem;
+    display: inline-flex; align-items: center; gap: 10px; transition: all 0.2s;
+    box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+  }
+  .cta-big:hover { background: #1ebe58; transform: translateY(-3px); }
+  .contato-alternatives { margin-top: 28px; font-family: sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+  .contato-alternatives a { color: rgba(255,255,255,0.85); }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy); color: rgba(255,255,255,0.55); padding: 30px 24px;
+    text-align: center; font-family: sans-serif; font-size: 0.8rem;
+  }
+  footer a { color: rgba(255,255,255,0.75); text-decoration: none; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-top { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+
+  /* FLOATING WHATSAPP */
+  .wa-float {
+    position: fixed; bottom: 24px; right: 24px; z-index: 200;
+    background: #25D366; color: #fff; text-decoration: none;
+    width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem; box-shadow: 0 4px 20px rgba(37,211,102,0.5); transition: all 0.2s;
+  }
+  .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.7); }
+  .wa-float-pulse {
+    position: absolute; inset: 0; border-radius: 50%;
+    background: #25D366; animation: pulse 2s infinite; z-index: -1;
+  }
+  @keyframes pulse { 0%,100%{transform:scale(1);opacity:0.6} 50%{transform:scale(1.35);opacity:0} }
+
+  /* LIGHTBOX */
+  .lightbox {
+    display: none; position: fixed; inset: 0; z-index: 300;
+    background: rgba(0,0,0,0.9); align-items: center; justify-content: center; padding: 20px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 8px; }
+  .lightbox-close {
+    position: absolute; top: 20px; right: 24px; color: #fff; font-size: 2.5rem;
+    cursor: pointer; background: none; border: none; line-height: 1;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: rgba(27,58,92,0.98); padding: 20px; gap: 14px; }
+    .nav-menu-btn { display: block; }
+    .host-wrap { grid-template-columns: 1fr; text-align: center; }
+    .host-badges, .host-stats { justify-content: center; }
+    .reserva-grid { grid-template-columns: 1fr; }
+    .reserva-form-grid { grid-template-columns: 1fr; }
+    .location-info { grid-template-columns: 1fr; }
+    section { padding: 60px 16px; }
+    .hero-photo-placeholder { max-height: 50vh; }
+    .hero-photo-placeholder img { max-height: 50vh; }
+  }
+  @media (max-width: 480px) {
+    .hero-stats { gap: 10px; }
+    .hero-stat { padding: 8px 12px; }
+    .lang-switcher { gap: 4px; }
+    .lang-btn { padding: 2px 6px; font-size: 0.7rem; }
+  }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ME4ZYX5XXK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ME4ZYX5XXK');
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Casa <span>Aloé Vera</span></a>
+  <button class="nav-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+  <div class="nav-links">
+    <a href="#diferenciais" data-i18n="nav_diff">Diferenciais</a>
+    <a href="#galeria" data-i18n="nav_gallery">Galeria</a>
+    <a href="#avaliacoes" data-i18n="nav_reviews">Avaliações</a>
+    <a href="#anfitriao" data-i18n="nav_host">Anfitriã</a>
+    <a href="#reserva" data-i18n="nav_book">Reservar</a>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('pt')">PT</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-photo-placeholder">
+    <img src="https://drive.google.com/thumbnail?id=1KrL-ygQzfcY6k20BIqnM0BuPLdrI3C-Q&sz=w1600" alt="Casa Aloé Vera – Fachada ao entardecer">
+    <div class="hero-overlay"></div>
+    <div class="hero-photo-text">
+      <h1>Casa <span>Aloé Vera</span></h1>
+      <p>Cidade Velha · Cabo Verde · UNESCO</p>
+      <p class="hero-subtitle-small">Vacation House · Alojamento Local</p>
+    </div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-tag" data-i18n="hero_tag">Cidade Velha · Cabo Verde · UNESCO</div>
+    <h1 class="hero-title">Casa <span>Aloé Vera</span></h1>
+    <p class="hero-subtitle" data-i18n="hero_subtitle">Vista panorâmica do mar · Brisa constante · Arquitectura de pedra naturalmente fresca</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-num">2</span><span class="hero-stat-label" data-i18n="stat_rooms">Quartos</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">3</span><span class="hero-stat-label" data-i18n="stat_beds">Camas</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">4</span><span class="hero-stat-label" data-i18n="stat_guests">Hóspedes</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">1</span><span class="hero-stat-label" data-i18n="stat_bath">Casa de banho</span></div>
+    </div>
+    <div class="hero-badges">
+      <span class="hero-badge">🏊 <span data-i18n="badge_pool">Piscina</span></span>
+      <span class="hero-badge">📶 <span data-i18n="badge_wifi">Wi-Fi Starlink</span></span>
+      <span class="hero-badge">☀️ <span data-i18n="badge_solar">Painéis solares</span></span>
+      <span class="hero-badge">🚗 <span data-i18n="badge_parking">Estacionamento</span></span>
+      <span class="hero-badge">🍳 <span data-i18n="badge_breakfast">Pequeno-almoço incluído</span></span>
+    </div>
+    <div class="hero-cta">
+      <a href="https://wa.me/2389813071?text=Ol%C3%A1%20Sofia!%20Vi%20o%20site%20da%20Casa%20Alo%C3%A9%20Vera%20e%20gostaria%20de%20saber%20a%20disponibilidade%20e%20pre%C3%A7o%20para%20as%20seguintes%20datas%3A%20[DATAS]%20para%20[N%C2%BA%20pessoas]%20pessoas." target="_blank" class="btn-whatsapp">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        👉 <span data-i18n="hero_cta">Ver disponibilidade e preço agora</span>
+      </a>
+      <a href="#galeria" class="btn-outline" data-i18n="hero_cta2">Ver fotos</a>
+    </div>
+    <div class="hero-rating">
+      <span class="stars">★★★★★</span>
+      <strong> 4.94</strong> <span data-i18n="hero_reviews">· 108 avaliações no Airbnb</span>
+      <br><small><a href="https://www.airbnb.com/h/cidadevelha" target="_blank" style="color:var(--green-mid)">airbnb.com/h/cidadevelha</a></small>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section id="diferenciais">
+  <div class="section-inner">
+    <p class="section-tag" data-i18n="diff_tag">Por que escolher</p>
+    <h2 class="section-title" data-i18n="diff_title">O que torna a Casa Aloé Vera especial</h2>
+    <div class="section-divider"></div>
+    <div class="diff-grid">
+      <div class="diff-card">
+        <div class="diff-icon">🏡</div>
+        <div class="diff-title" data-i18n="d1_title">Casa rústica &amp; fresca</div>
+        <div class="diff-text" data-i18n="d1_text">Construída em pedra tradicional cabo-verdiana, a casa mantém-se naturalmente fresca sem necessidade de ar condicionado.</div>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">🌊🌬️</div>
+        <div class="diff-title" data-i18n="d2_title">Vista panorâmica & brisa constante</div>
+        <div class="diff-text" data-i18n="d2_text">Vista deslumbrante sobre o Atlântico — é possível avistar baleias e golfinhos em certas épocas. Localizada a 200 m do mar em ponto elevado, a casa beneficia de vento natural durante todo o dia.</div>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">🍳</div>
+        <div class="diff-title" data-i18n="d9_title">Pequeno-almoço incluído</div>
+        <div class="diff-text" data-i18n="d9_text">Começa o dia com um pequeno-almoço caseiro incluído, com produtos nacionais: ovo, pão, fruta tropical da época, café e produtos locais — para que tenhas uma manhã tranquila sem te preocupares com nada.</div>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">🏊</div>
+        <div class="diff-title" data-i18n="d4_title">Piscina</div>
+        <div class="diff-text" data-i18n="d4_text">Um luxo raro nesta região. Mergulhe com vista para o oceano enquanto ouve as ondas ao longe.</div>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">☀️</div>
+        <div class="diff-title" data-i18n="d5_title">Sustentável &amp; consciente</div>
+        <div class="diff-text" data-i18n="d5_text">Painéis solares e design ventilado reduzem o impacto ambiental. Energia limpa no paraíso atlântico.</div>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">📍</div>
+        <div class="diff-title" data-i18n="d7_title">Património Mundial UNESCO</div>
+        <div class="diff-text" data-i18n="d7_text">Cidade Velha foi a primeira capital de Cabo Verde. Centro histórico a 15 min a pé, repleto de história e cultura.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+  <div class="section-inner">
+    <p class="section-tag" data-i18n="gal_tag">Fotografia</p>
+    <h2 class="section-title" data-i18n="gal_title">A Casa em imagens</h2>
+    <div class="section-divider"></div>
+    <div class="gallery-cats">
+      <button class="gallery-cat-btn active" onclick="filterGallery('all',this)" data-i18n="gal_all">Todas</button>
+      <button class="gallery-cat-btn" onclick="filterGallery('exterior',this)" data-i18n="gal_ext">Exterior &amp; Piscina</button>
+      <button class="gallery-cat-btn" onclick="filterGallery('view',this)" data-i18n="gal_view">Vista Mar</button>
+      <button class="gallery-cat-btn" onclick="filterGallery('rooms',this)" data-i18n="gal_rooms">Quartos</button>
+      <button class="gallery-cat-btn" onclick="filterGallery('interior',this)" data-i18n="gal_int">Interior</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- COMO ADICIONAR FOTOS: No Google Drive, clica com botão direito em cada foto → "Partilhar" → copia o ID do URL (entre /d/ e /view) → substitui FILE_ID abaixo -->
+      <!-- Formato: src="https://drive.google.com/uc?export=view&id=FILE_ID" -->
+
+      <div class="gallery-item" data-cat="exterior">
+        <img src="https://drive.google.com/thumbnail?id=1KrL-ygQzfcY6k20BIqnM0BuPLdrI3C-Q&sz=w1200" alt="Fachada da Casa Aloé Vera ao entardecer" onerror="this.style.display='none';this.parentElement.querySelector('.gallery-placeholder').style.display='flex'">
+        <div class="gallery-placeholder" style="display:none"><div class="gallery-placeholder-icon">🏡</div><div class="gallery-placeholder-text">Fachada ao entardecer</div></div>
+      </div>
+      <div class="gallery-item" data-cat="exterior">
+        <img src="https://drive.google.com/thumbnail?id=1_IQGFpAsxMAk0eT6Y7VqqcAN3XwOwEAg&sz=w1200" alt="Jardim com espreguiçadeiras e vista mar" onerror="this.style.display='none';this.parentElement.querySelector('.gallery-placeholder').style.display='flex'">
+        <div class="gallery-placeholder" style="display:none"><div class="gallery-placeholder-icon">🌿</div><div class="gallery-placeholder-text">Jardim com espreguiçadeiras</div></div>
+      </div>
+      <div class="gallery-item" data-cat="exterior">
+        <img src="https://drive.google.com/thumbnail?id=1VNuNyLOm650qOXMs1G1Atzo552kOz4bw&sz=w1200" alt="Jardim exterior com mesa e piscina" onerror="this.style.display='none';this.parentElement.querySelector('.gallery-placeholder').style.display='flex'">
+        <div class="gallery-placeholder" style="display:none"><div class="gallery-placeholder-icon">🪴</div><div class="gallery-placeholder-text">Jardim com piscina ao fundo</div></div>
+      </div>
+      <div class="gallery-item" data-cat="exterior">
+        <img src="https://drive.google.com/thumbnail?id=1McDvRAEXe6GPQWEgMN8xjTmryWf27O3F&sz=w1200" alt="Parede de pedra branca — detalhe exterior" onerror="this.style.display='none';this.parentElement.querySelector('.gallery-placeholder').style.display='flex'">
+        <div class="gallery-placeholder" style="display:none"><div class="gallery-placeholder-icon">🪨</div><div class="gallery-placeholder-text">Parede de pedra branca</div></div>
+      </div>
+      <div class="gallery-item" data-cat="view">
+        <img src="https://drive.google.com/thumbnail?id=1H29bzW_GflmYjzmL_UD6K1qNIxozxlA-&sz=w1200" alt="Varanda com mesa e vista panorâmica para o oceano" onerror="this.style.display='none';this.parentElement.querySelector('.gallery-placeholder').style.display='flex'">
+        <div class="gallery-placeholder" style="display:none"><div class="gallery-placeholder-icon">🌊</div><div class="gallery-placeholder-text">Varanda com vista para o oceano</div></div>
+      </div>
+      <div class="gallery-item" data-cat="view">
+        <img src="https://drive.google.com/thumbnail?id=1sW4cOf-bf82XxIHsuV-HU-kt8avRxVz4&sz=w1200" alt="Jardim com cactos e vista para o mar" onerror="this.style.display='none';this.parentElement.querySelector('.gallery-placeholder').style.display='flex'">
+        <div class="gallery-placeholder" style="display:none"><div class="gallery-placeholder-icon">🌵</div><div class="gallery-placeholder-text">Jardim com vista para o mar</div></div>
+      </div>
+      <div class="gallery-item" data-cat="interior">
+        <img src="https://drive.google.com/thumbnail?id=1YHyAAbTISZgWWvySitBdqsbprHs3TjsT&sz=w1200" alt="Pequeno-almoço servido na Casa Aloé Vera" onerror="this.style.display='none';this.parentElement.querySelector('.gallery-placeholder').style.display='flex'">
+        <div class="gallery-placeholder" style="display:none"><div class="gallery-placeholder-icon">🍳</div><div class="gallery-placeholder-text">Pequeno-almoço incluído</div></div>
+      </div>
+      <div class="gallery-item" data-cat="view">
+        <img src="https://drive.google.com/thumbnail?id=16CLGBVArd3Dgww2sTK1_JYw_key9dbe3&sz=w1200" alt="Vista da porta de saída para o jardim e mar" onerror="this.style.display='none';this.parentElement.querySelector('.gallery-placeholder').style.display='flex'">
+        <div class="gallery-placeholder" style="display:none"><div class="gallery-placeholder-icon">🚪</div><div class="gallery-placeholder-text">Vista da porta para o jardim e mar</div></div>
+      </div>
+      <div class="gallery-item" data-cat="rooms">
+        <img src="https://drive.google.com/thumbnail?id=1TTWDovAulfJHmf15HfvQ0KFkLgFWmnFG&sz=w1200" alt="Quarto de casal com teto de madeira e ventoinha" onerror="this.style.display='none';this.parentElement.querySelector('.gallery-placeholder').style.display='flex'">
+        <div class="gallery-placeholder" style="display:none"><div class="gallery-placeholder-icon">🛏️</div><div class="gallery-placeholder-text">Quarto 1 — cama de casal</div></div>
+      </div>
+      <div class="gallery-item" data-cat="rooms">
+        <img src="https://drive.google.com/thumbnail?id=1qChMFrgZZDwkBO2ZrzS6fa3M6J3XhYjV&sz=w1200" alt="Quarto twin com duas camas individuais" onerror="this.style.display='none';this.parentElement.querySelector('.gallery-placeholder').style.display='flex'">
+        <div class="gallery-placeholder" style="display:none"><div class="gallery-placeholder-icon">🛏️</div><div class="gallery-placeholder-text">Quarto 2 — 2 camas individuais</div></div>
+      </div>
+      <div class="gallery-item" data-cat="interior">
+        <img src="https://drive.google.com/thumbnail?id=17OYB9dc5q79oWDtiZdQ1XFOyUK-a4aF3&sz=w1200" alt="Sala open-space com teto alto de vigas" onerror="this.style.display='none';this.parentElement.querySelector('.gallery-placeholder').style.display='flex'">
+        <div class="gallery-placeholder" style="display:none"><div class="gallery-placeholder-icon">🪑</div><div class="gallery-placeholder-text">Sala open-space</div></div>
+      </div>
+      <div class="gallery-item" data-cat="interior">
+        <img src="https://drive.google.com/thumbnail?id=1rdTsS5Vjt2KNmT4DaXlyNKYqbpp6_FYa&sz=w1200" alt="Cozinha completa equipada" onerror="this.style.display='none';this.parentElement.querySelector('.gallery-placeholder').style.display='flex'">
+        <div class="gallery-placeholder" style="display:none"><div class="gallery-placeholder-icon">🍽️</div><div class="gallery-placeholder-text">Cozinha equipada</div></div>
+      </div>
+      <div class="gallery-item" data-cat="interior">
+        <img src="https://drive.google.com/thumbnail?id=14So0alxCowUo9vQn2bAERWQm8wcNIgOw&sz=w1200" alt="Stay with Us — detalhe interior" onerror="this.style.display='none';this.parentElement.querySelector('.gallery-placeholder').style.display='flex'">
+        <div class="gallery-placeholder" style="display:none"><div class="gallery-placeholder-icon">💚</div><div class="gallery-placeholder-text">"Stay with Us ♥" — detalhe interior</div></div>
+      </div>
+      <div class="gallery-item" data-cat="interior">
+        <img src="https://drive.google.com/thumbnail?id=1iEv6c-FYhO1OYpCOIW8Vw71vmc7LZnyY&sz=w1200" alt="Casa de banho com azulejos azuis" onerror="this.style.display='none';this.parentElement.querySelector('.gallery-placeholder').style.display='flex'">
+        <div class="gallery-placeholder" style="display:none"><div class="gallery-placeholder-icon">🚿</div><div class="gallery-placeholder-text">Casa de banho</div></div>
+      </div>
+      <div class="gallery-item" data-cat="interior">
+        <img src="https://drive.google.com/thumbnail?id=1atySxPvqoB9sXaL-hAekEG5qecXzbrYn&sz=w1200" alt="Interior à noite — ambiente acolhedor" onerror="this.style.display='none';this.parentElement.querySelector('.gallery-placeholder').style.display='flex'">
+        <div class="gallery-placeholder" style="display:none"><div class="gallery-placeholder-icon">🌙</div><div class="gallery-placeholder-text">Interior à noite</div></div>
+      </div>
+      <div class="gallery-item" data-cat="rooms">
+        <img src="https://drive.google.com/thumbnail?id=1Focg4vi-4JdNj2m7_rBjQyXObYa4FizL&sz=w1200" alt="Quarto com duas camas — opção camas juntas" onerror="this.style.display='none';this.parentElement.querySelector('.gallery-placeholder').style.display='flex'">
+        <div class="gallery-placeholder" style="display:none"><div class="gallery-placeholder-icon">🛏️</div><div class="gallery-placeholder-text">Quarto — opção camas juntas</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVALIAÇÕES -->
+<section id="avaliacoes">
+  <div class="section-inner">
+    <p class="section-tag" data-i18n="rev_tag">O que dizem os hóspedes</p>
+    <h2 class="section-title" data-i18n="rev_title">Avaliações</h2>
+    <div class="section-divider"></div>
+    <div class="rating-hero">
+      <div class="rating-big">4.94</div>
+      <div class="stars" style="font-size:1.5rem;color:#FFD700;">★★★★★</div>
+      <div class="rating-sub" data-i18n="rev_count">Baseado em 108 avaliações verificadas no Airbnb</div>
+      <div class="rating-cats">
+        <div class="rating-cat"><span class="rating-cat-score">5.0</span><span data-i18n="rc_comm">Comunicação</span></div>
+        <div class="rating-cat"><span class="rating-cat-score">4.9</span><span data-i18n="rc_clean">Limpeza</span></div>
+        <div class="rating-cat"><span class="rating-cat-score">4.9</span><span data-i18n="rc_acc">Precisão</span></div>
+        <div class="rating-cat"><span class="rating-cat-score">4.9</span><span data-i18n="rc_loc">Localização</span></div>
+        <div class="rating-cat"><span class="rating-cat-score">4.8</span><span data-i18n="rc_val">Valor</span></div>
+        <div class="rating-cat"><span class="rating-cat-score">4.9</span><span data-i18n="rc_arr">Check-in</span></div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-i18n="r1_text">"Comunicação 5.0. Sofia é super atenciosa. A casa é exatamente como nas fotos, com uma vista incrível para o mar. Voltamos com certeza!"</p>
+        <div class="review-author" data-i18n="r1_auth">— Hóspede verificado · Airbnb</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-i18n="r2_text">"Lugar mágico! A brisa do mar e a frescura da pedra fizeram toda a diferença. A piscina com vista é um sonho. Voltaremos com certeza."</p>
+        <div class="review-author" data-i18n="r2_auth">— Hóspede verificado · Airbnb</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-i18n="r3_text">"Limpeza impecável, localização tranquila e histórica. A família anfitriã foi sempre prestável sem ser intrusiva. Recomendo vivamente."</p>
+        <div class="review-author" data-i18n="r3_auth">— Hóspede verificado · Airbnb</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-i18n="r4_text">"A Cidade Velha é deslumbrante e a casa é o refúgio perfeito. Independência total, com o apoio da Sofia sempre disponível via WhatsApp."</p>
+        <div class="review-author" data-i18n="r4_auth">— Hóspede verificado · Airbnb</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-i18n="r5_text">"Acordar com aquela vista para o oceano é inesquecível. A casa tem uma alma especial, rústica e acolhedora. Sofia faz com que te sintas em casa."</p>
+        <div class="review-author" data-i18n="r5_auth">— Hóspede verificado · Airbnb</div>
+      </div>
+      <div class="review-card" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:var(--green);border:none;">
+        <div style="font-size:3rem;margin-bottom:12px;">💬</div>
+        <p style="color:rgba(255,255,255,0.85);font-family:sans-serif;font-size:0.9rem;margin-bottom:16px;" data-i18n="r_more">Ver todas as avaliações no Airbnb</p>
+        <a href="https://www.airbnb.com/h/cidadevelha" target="_blank" style="color:var(--sand);font-family:sans-serif;font-size:0.85rem;text-decoration:none;border-bottom:1px solid rgba(232,213,176,0.5);">airbnb.com/h/cidadevelha ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANFITRIÃO -->
+<section id="anfitriao">
+  <div class="section-inner">
+    <p class="section-tag" data-i18n="host_tag">Quem te recebe</p>
+    <h2 class="section-title" data-i18n="host_title">A tua anfitriã: Sofia</h2>
+    <div class="section-divider"></div>
+    <div class="host-wrap">
+      <div class="host-photo-wrap">
+        <div class="host-photo">
+          <img src="https://drive.google.com/thumbnail?id=1cNUMZx-1DXOB6tJAxngrMq8In1sTq8Mz&sz=w600" alt="Sofia — anfitriã da Casa Aloé Vera" onerror="this.parentElement.innerHTML='🤗'">
+        </div>
+        <div class="host-name">Sofia</div>
+        <div class="host-badges">
+          <span class="host-badge">⭐ Superhost</span>
+          <span class="host-badge">✅ 100% resposta</span>
+          <span class="host-badge">⚡ &lt;1h</span>
+        </div>
+      </div>
+      <div>
+        <p class="host-bio" data-i18n="host_bio">Sou Sofia, cabo-verdiana, mãe de três meninos, apaixonada pela minha cultura, pela boa comida e pelos momentos simples à mesa com amigos.<br><br>Trabalho a tempo inteiro na área do desenvolvimento numa organização internacional, contribuindo para o desenvolvimento sustentável do meu país. A Casa Aloé Vera nasceu como um projeto pessoal — um espaço que reflete o meu gosto por receber bem e criar ambientes acolhedores.<br><br>Embora já não esteja sempre presente, faço questão de que tudo esteja bem preparado para uma estadia tranquila e confortável.<br><br>Na Casa Aloé Vera, vais encontrar um ambiente sereno, com atenção aos detalhes e o essencial para relaxar. Posso ajudar com sugestões de praias bonitas, bons restaurantes e ideias para explorar outras ilhas — o melhor de Cabo Verde, ao teu ritmo.<br><br>Aqui encontras calma, a brisa do mar e uma experiência com identidade cabo-verdiana.</p>
+        <div class="host-stats">
+          <div class="host-stat"><span class="host-stat-num">3+</span><span class="host-stat-label" data-i18n="hs_years">Anos como anfitriã</span></div>
+          <div class="host-stat"><span class="host-stat-num">108</span><span class="host-stat-label" data-i18n="hs_reviews">Avaliações</span></div>
+          <div class="host-stat"><span class="host-stat-num">4.94</span><span class="host-stat-label" data-i18n="hs_rating">Nota média</span></div>
+          <div class="host-stat"><span class="host-stat-num">🇵🇹🇬🇧</span><span class="host-stat-label" data-i18n="hs_lang">PT &amp; EN fluente</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVA & REGRAS -->
+<section id="reserva">
+  <div class="section-inner">
+    <p class="section-tag" data-i18n="book_tag">Reserva direta</p>
+    <h2 class="section-title" data-i18n="book_title">Como reservar &amp; Regras da casa</h2>
+    <div class="section-divider"></div>
+    <div class="reserva-grid">
+      <div class="reserva-card">
+        <div class="reserva-card-title">📲 <span data-i18n="book_how">Como fazer a tua reserva</span></div>
+        <div class="step"><div class="step-num">1</div><div class="step-text"><strong data-i18n="book_s1t">Entra em contacto</strong><br><span data-i18n="book_s1d">Envia uma mensagem via WhatsApp com as datas pretendidas e número de hóspedes.</span></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text"><strong data-i18n="book_s2t">Confirmação de disponibilidade</strong><br><span data-i18n="book_s2d">Sofia confirma a disponibilidade e o preço em menos de 1 hora.</span></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text"><strong data-i18n="book_s3t">Pagamento de reserva (30%)</strong><br><span data-i18n="book_s3d">Transfere 30% do valor via Revolut para garantir as datas. O e-mail é partilhado no chat.</span></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text"><strong data-i18n="book_s4t">Chegada &amp; pagamento final (70%)</strong><br><span data-i18n="book_s4d">Os restantes 70% são pagos na chegada, em dinheiro (euros ou escudos cabo-verdianos).</span></div></div>
+        <div style="margin-top:20px;">
+          <div class="reserva-card-title" style="font-size:0.95rem;margin-bottom:12px;" data-i18n="book_pay">Métodos de pagamento</div>
+          <div class="payment-methods">
+            <div class="payment-badge">📱 Revolut</div>
+            <div class="payment-badge">💶 Euros (cash)</div>
+            <div class="payment-badge">🇨🇻 Escudos CVE</div>
+          </div>
+        </div>
+        <div style="margin-top:20px;">
+          <div class="reserva-card-title" style="font-size:0.95rem;margin-bottom:12px;" data-i18n="book_times">Horários</div>
+          <div class="checkin-times">
+            <div class="time-box"><div class="time-box-label" data-i18n="checkin">Check-in</div><div class="time-box-time">15:00</div></div>
+            <div class="time-box"><div class="time-box-label" data-i18n="checkout">Check-out</div><div class="time-box-time">11:00</div></div>
+          </div>
+          <p style="font-family:sans-serif;font-size:0.78rem;color:var(--green-wood);margin-top:10px;line-height:1.5;" data-i18n="book_flex">🕐 Sou muito flexível nos horários — podes chegar a qualquer hora do dia ou da noite, até de madrugada. Criamos sempre as condições para uma chegada tranquila.</p>
+        </div>
+      </div>
+      <div class="reserva-card">
+        <div class="reserva-card-title">📋 <span data-i18n="rules_title">Regras da casa</span></div>
+        <ul class="rules-list">
+          <li><span class="rule-icon">🚭</span><span data-i18n="r_smoke">Proibido fumar dentro da casa</span></li>
+          <li><span class="rule-icon">🐾</span><span data-i18n="r_pets">Animais de estimação: mediante consulta prévia via WhatsApp</span></li>
+          <li><span class="rule-icon">🔇</span><span data-i18n="r_quiet">Silêncio a partir das 22h (vizinhança residencial tranquila)</span></li>
+          <li><span class="rule-icon">👪</span><span data-i18n="r_family">Espaço partilhado: a família vive na mesma propriedade — privacidade garantida mas com apoio próximo</span></li>
+          <li><span class="rule-icon">♻️</span><span data-i18n="r_sustain">Sustentabilidade: água e energia são recursos preciosos na ilha — usa com consciência</span></li>
+          <li><span class="rule-icon">🔑</span><span data-i18n="r_keys">Recepção pessoal: a Sofia ou família recebe sempre os hóspedes à chegada</span></li>
+          <li><span class="rule-icon">📸</span><span data-i18n="r_photos">Partilha as tuas fotos com #CasaAloeVera no Instagram!</span></li>
+        </ul>
+        <div style="margin-top:28px;padding:18px;background:rgba(37,211,102,0.08);border-radius:10px;border:1px solid rgba(37,211,102,0.2);">
+          <p style="font-family:sans-serif;font-size:0.85rem;color:var(--text-mid);margin-bottom:14px;" data-i18n="wa_ready">Pronto para reservar? Fala diretamente com a Sofia:</p>
+          <a href="https://wa.me/2389813071?text=Ol%C3%A1%21+Vi+o+site+da+Casa+Alo%C3%A9+Vera+e+quero+fazer+uma+reserva+direta." target="_blank" class="btn-whatsapp" style="justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            +238 981 3071
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORMULÁRIO RESERVA RÁPIDA -->
+    <div class="reserva-form-wrap">
+      <div class="reserva-card-title">📝 <span data-i18n="form_title">Reserva Rápida</span></div>
+      <p class="reserva-form-subtitle" data-i18n="form_subtitle">Preencha abaixo e escolha como quer receber a resposta — a Sofia responde em menos de 1 hora:</p>
+      <div class="reserva-form-grid">
+        <input type="text" id="rr_nome" placeholder="Seu nome completo" data-i18n-placeholder="form_name">
+        <input type="email" id="rr_email" placeholder="Seu e-mail" data-i18n-placeholder="form_email">
+        <input type="tel" id="rr_tel" placeholder="WhatsApp (ex: +238 981 3071)" data-i18n-placeholder="form_phone">
+        <input type="text" id="rr_datas" placeholder="Datas pretendidas (ex: 15–20 Jul 2025)" data-i18n-placeholder="form_dates">
+        <div class="full">
+          <select id="rr_pessoas">
+            <option value="1">1 pessoa / person / persona</option>
+            <option value="2" selected>2 pessoas / persons / personas</option>
+            <option value="3">3 pessoas / persons / personas</option>
+            <option value="4">4 pessoas / persons / personas</option>
+          </select>
+        </div>
+        <div class="full">
+          <textarea id="rr_notas" placeholder="Notas / Notes — horário de chegada, pedidos especiais, dúvidas..." data-i18n-placeholder="form_notes"></textarea>
+        </div>
+      </div>
+      <p class="reserva-contact-label" data-i18n="form_contact_label">Como prefere ser contactado?</p>
+      <div class="reserva-contact-options">
+        <label><input type="radio" name="rr_contato" value="whatsapp" checked> 📱 WhatsApp</label>
+        <label><input type="radio" name="rr_contato" value="email"> 📧 E-mail</label>
+      </div>
+      <button class="btn-reserva-send" onclick="enviarReservaRapida()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-i18n="form_send">Enviar pedido de reserva</span>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section id="localizacao">
+  <div class="section-inner">
+    <p class="section-tag" data-i18n="loc_tag">Como chegar</p>
+    <h2 class="section-title" data-i18n="loc_title">Localização</h2>
+    <div class="section-divider"></div>
+    <div class="map-embed">
+      <iframe
+        src="https://maps.google.com/maps?q=Casa+Aloe+Vera,+Encosta+Azul,+Cidade+Velha+7629,+Cabo+Verde&z=17&output=embed"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Casa Aloé Vera — Encosta Azul, Cidade Velha, Cabo Verde">
+      </iframe>
+    </div>
+    <div class="location-info">
+      <div class="location-card">
+        <div class="location-card-title">📍 <span data-i18n="loc_dist">Distâncias</span></div>
+        <div class="location-card-text" data-i18n="loc_dist_text">
+          🏛️ Centro Histórico (restaurantes, monumentos, artesanato) — 1km • 15 min a pé<br><br>
+          🏖️ Praia de Cidade Velha — 1400m • 15 min<br><br>
+          🍽️ Restaurantes locais — 1400m • 15 min<br><br>
+          🚗 Cidade da Praia (capital) — 10 km • 15 min de carro
+        </div>
+      </div>
+      <div class="location-card">
+        <div class="location-card-title">🚗 <span data-i18n="loc_transport">Transporte</span></div>
+        <div class="location-card-text" data-i18n="loc_transport_text">
+          ✈️ Aeroporto Internacional de Santiago (RAI) — 30 min de táxi<br><br>
+          🚌 Hiace (transporte público) de Praia para Cidade Velha — acessível e económico<br><br>
+          🅿️ Estacionamento gratuito no local — sem necessidade de alugar carro (mas se quiser, temos estacionamento)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="section-inner">
+    <p class="section-tag" data-i18n="cta_tag">Reserva direta</p>
+    <h2 class="section-title" data-i18n="cta_title">Pronto para a tua estadia em Cabo Verde?</h2>
+    <div class="section-divider"></div>
+    <p class="contato-text" data-i18n="cta_text">Sem taxas de plataforma. Sem formulários complicados. Fala diretamente com Sofia e reserva a tua Casa Aloé Vera.</p>
+    <a href="https://wa.me/2389813071?text=Ol%C3%A1%21+Vi+o+site+da+Casa+Alo%C3%A9+Vera+e+quero+fazer+uma+reserva+direta." target="_blank" class="cta-big">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span data-i18n="cta_btn">Reservar agora via WhatsApp</span>
+    </a>
+    <div class="contato-alternatives">
+      <span data-i18n="cta_alt">Ver avaliações no Airbnb: </span>
+      <a href="https://www.airbnb.com/h/cidadevelha" target="_blank">airbnb.com/h/cidadevelha</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a href="#inicio">Casa Aloé Vera</a>
+      <a href="#diferenciais" data-i18n="nav_diff">Diferenciais</a>
+      <a href="#galeria" data-i18n="nav_gallery">Galeria</a>
+      <a href="#avaliacoes" data-i18n="nav_reviews">Avaliações</a>
+      <a href="#reserva" data-i18n="nav_book">Reservar</a>
+      <a href="https://www.airbnb.com/h/cidadevelha" target="_blank">Airbnb</a>
+    </div>
+    <p>© 2025 Casa Aloé Vera · Cidade Velha, Cabo Verde · <span data-i18n="footer_rights">Todos os direitos reservados</span></p>
+  </div>
+</footer>
+
+<!-- FLOATING WA -->
+<a href="https://wa.me/2389813071?text=Ol%C3%A1%21+Vi+o+site+da+Casa+Alo%C3%A9+Vera+e+quero+fazer+uma+reserva+direta." target="_blank" class="wa-float" title="WhatsApp">
+  <div class="wa-float-pulse"></div>
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+// ---- TRANSLATIONS ----
+const i18n = {
+  pt: {
+    nav_diff:"Diferenciais", nav_gallery:"Galeria", nav_reviews:"Avaliações", nav_host:"Anfitriã", nav_book:"Reservar",
+    hero_tag:"Cidade Velha · Cabo Verde · UNESCO",
+    hero_subtitle:"Vista panorâmica do mar · Brisa constante · Arquitectura de pedra naturalmente fresca",
+    stat_rooms:"Quartos", stat_beds:"Camas", stat_guests:"Hóspedes", stat_bath:"Casa de banho",
+    badge_pool:"Piscina", badge_wifi:"Wi-Fi", badge_solar:"Painéis solares", badge_parking:"Estacionamento", badge_breakfast:"Pequeno-almoço incluído",
+    hero_cta:"Reservar via WhatsApp", hero_cta2:"Ver fotos",
+    hero_reviews:"· 108 avaliações no Airbnb",
+    diff_tag:"Por que escolher", diff_title:"O que torna a Casa Aloé Vera especial",
+    d1_title:"Casa rústica & fresca", d1_text:"Construída em pedra tradicional cabo-verdiana, a casa mantém-se naturalmente fresca sem necessidade de ar condicionado.",
+    d2_title:"Vista panorâmica & brisa constante", d2_text:"Vista deslumbrante sobre o Atlântico — é possível avistar baleias e golfinhos em certas épocas. Localizada a 200 m do mar em ponto elevado, a casa beneficia de vento natural durante todo o dia.",
+    d3_title:"Brisa constante", d3_text:"Localizada a 200 m do mar em ponto elevado, a casa beneficia de vento natural durante todo o dia.",
+    d4_title:"Piscina", d4_text:"Um luxo raro nesta região. Mergulhe com vista para o oceano enquanto ouve as ondas ao longe.",
+    d5_title:"Sustentável & consciente", d5_text:"Painéis solares e design ventilado reduzem o impacto ambiental. Energia limpa no paraíso atlântico.",
+    d6_title:"Família anfitriã no local", d6_text:"Sofia e a sua família vivem na propriedade. Terás privacidade total com apoio próximo e dicas locais personalizadas.",
+    d7_title:"Património Mundial UNESCO", d7_text:"Cidade Velha foi a primeira capital de Cabo Verde. Centro histórico a 15 min a pé, repleto de história e cultura.",
+    d8_title:"Reserva direta = sem taxas", d8_text:"Ao reservar diretamente com Sofia, evitas as taxas de plataforma e obtens um preço mais justo para ambas as partes.",
+    d9_title:"Pequeno-almoço incluído", d9_text:"Começa o dia com um pequeno-almoço caseiro incluído, com produtos nacionais: ovo, pão, fruta tropical da época, café e produtos locais — para que tenhas uma manhã tranquila sem te preocupares com nada.",
+    gal_tag:"Fotografia", gal_title:"A Casa em imagens", gal_all:"Todas", gal_ext:"Exterior & Piscina", gal_view:"Vista Mar", gal_rooms:"Quartos", gal_int:"Interior",
+    ph_facade:"Fachada · Foto 1\nSubstituir pelo link real", ph_pool:"Piscina · Foto 1\nSubstituir pelo link real",
+    ph_ext2:"Exterior · Foto 2\nSubstituir pelo link real", ph_view1:"Vista Mar · Foto 1\nSubstituir pelo link real",
+    ph_view2:"Vista Mar · Foto 2\nSubstituir pelo link real", ph_room1:"Quarto 1\nSubstituir pelo link real",
+    ph_room2:"Quarto 2\nSubstituir pelo link real", ph_living:"Sala\nSubstituir pelo link real",
+    ph_kitchen:"Cozinha\nSubstituir pelo link real",
+    gal_note:"💡 Para adicionar as tuas fotos: substitui cada [INSIRA_FOTO_...] pelo link direto da imagem.",
+    rev_tag:"O que dizem os hóspedes", rev_title:"Avaliações",
+    rev_count:"Baseado em 108 avaliações verificadas no Airbnb",
+    rc_comm:"Comunicação", rc_clean:"Limpeza", rc_acc:"Precisão", rc_loc:"Localização", rc_val:"Valor", rc_arr:"Check-in",
+    r1_text:'"Comunicação 5.0. Sofia é super atenciosa. A casa é exatamente como nas fotos, com uma vista incrível para o mar. Voltamos com certeza!"',
+    r1_auth:"— Hóspede verificado · Airbnb",
+    r2_text:'"Lugar mágico! A brisa do mar e a frescura da pedra fizeram toda a diferença. A piscina com vista é um sonho. Voltaremos com certeza."',
+    r2_auth:"— Hóspede verificado · Airbnb",
+    r3_text:'"Limpeza impecável, localização tranquila e histórica. A família anfitriã foi sempre prestável sem ser intrusiva. Recomendo vivamente."',
+    r3_auth:"— Hóspede verificado · Airbnb",
+    r4_text:'"A Cidade Velha é deslumbrante e a casa é o refúgio perfeito. Independência total, com o apoio da Sofia sempre disponível via WhatsApp."',
+    r4_auth:"— Hóspede verificado · Airbnb",
+    r5_text:'"Acordar com aquela vista para o oceano é inesquecível. A casa tem uma alma especial, rústica e acolhedora. Sofia faz com que te sintas em casa."',
+    r5_auth:"— Hóspede verificado · Airbnb",
+    r_more:"Ver todas as avaliações no Airbnb",
+    host_tag:"Quem te recebe", host_title:"A tua anfitriã: Sofia",
+    host_bio:"Sou Sofia, cabo-verdiana, mãe de três meninos, apaixonada pela minha cultura, pela boa comida e pelos momentos simples à mesa com amigos.\n\nTrabalho a tempo inteiro na área do desenvolvimento numa organização internacional, contribuindo para o desenvolvimento sustentável do meu país. A Casa Aloé Vera nasceu como um projeto pessoal — um espaço que reflete o meu gosto por receber bem e criar ambientes acolhedores.\n\nEmbora já não esteja sempre presente, faço questão de que tudo esteja bem preparado para uma estadia tranquila e confortável.\n\nNa Casa Aloé Vera, vais encontrar um ambiente sereno, com atenção aos detalhes e o essencial para relaxar. Posso ajudar com sugestões de praias bonitas, bons restaurantes e ideias para explorar outras ilhas — o melhor de Cabo Verde, ao teu ritmo.\n\nAqui encontras calma, a brisa do mar e uma experiência com identidade cabo-verdiana.",
+    hs_years:"Anos como anfitriã", hs_reviews:"Avaliações", hs_rating:"Nota média", hs_lang:"PT & EN fluente",
+    book_tag:"Reserva direta", book_title:"Como reservar & Regras da casa",
+    book_how:"Como fazer a tua reserva",
+    book_s1t:"Entra em contacto", book_s1d:"Envia uma mensagem via WhatsApp com as datas pretendidas e número de hóspedes.",
+    book_s2t:"Confirmação de disponibilidade", book_s2d:"Sofia confirma a disponibilidade e o preço em menos de 1 hora.",
+    book_s3t:"Pagamento de reserva (30%)", book_s3d:"Transfere 30% do valor via Revolut para garantir as datas. O e-mail é partilhado no chat.",
+    book_s4t:"Chegada & pagamento final (70%)", book_s4d:"Os restantes 70% são pagos na chegada, em dinheiro (euros ou escudos cabo-verdianos).",
+    book_pay:"Métodos de pagamento", book_times:"Horários",
+    checkin:"Check-in", checkout:"Check-out",
+    book_flex:"🕐 Sou muito flexível nos horários — podes chegar a qualquer hora do dia ou da noite, até de madrugada. Criamos sempre as condições para uma chegada tranquila.",
+    rules_title:"Regras da casa",
+    r_smoke:"Proibido fumar dentro da casa",
+    r_pets:"Animais de estimação: mediante consulta prévia via WhatsApp",
+    r_quiet:"Silêncio a partir das 22h (vizinhança residencial tranquila)",
+    r_family:"Espaço partilhado: a família vive na mesma propriedade — privacidade garantida mas com apoio próximo",
+    r_sustain:"Sustentabilidade: água e energia são recursos preciosos na ilha — usa com consciência",
+    r_keys:"Recepção pessoal: a Sofia ou família recebe sempre os hóspedes à chegada",
+    r_photos:"Partilha as tuas fotos com #CasaAloeVera no Instagram!",
+    wa_ready:"Pronto para reservar? Fala diretamente com a Sofia:",
+    loc_tag:"Como chegar", loc_title:"Localização",
+    loc_gmaps:"Abrir no Google Maps ↗",
+    loc_dist:"Distâncias",
+    loc_dist_text:"🏛️ Centro Histórico (restaurantes, monumentos, artesanato) — 1km • 15 min a pé\n\n🏖️ Praia de Cidade Velha — 1400m • 15 min\n\n🍽️ Restaurantes locais — 1400m • 15 min\n\n🚗 Cidade da Praia (capital) — 10 km • 15 min de carro",
+    loc_transport:"Transporte",
+    loc_transport_text:"✈️ Aeroporto Internacional de Santiago (RAI) — 30 min de táxi\n\n🚌 Hiace (transporte público) de Praia para Cidade Velha — acessível e económico\n\n🅿️ Estacionamento gratuito no local — sem necessidade de alugar carro (mas se quiser, temos estacionamento)",
+    cta_tag:"Reserva direta", cta_title:"Pronto para a tua estadia em Cabo Verde?",
+    cta_text:"Sem taxas de plataforma. Sem formulários complicados. Fala diretamente com Sofia e reserva a tua Casa Aloé Vera.",
+    cta_btn:"Reservar agora via WhatsApp",
+    cta_alt:"Ver avaliações no Airbnb: ",
+    footer_rights:"Todos os direitos reservados",
+    form_title:"Reserva Rápida", form_subtitle:"Preencha abaixo e escolha como quer receber a resposta — a Sofia responde em menos de 1 hora:",
+    form_name:"Nome completo", form_email:"O seu e-mail", form_phone:"WhatsApp (ex: +238 981 3071)", form_dates:"Datas pretendidas (ex: 15–20 Jul 2025)",
+    form_notes:"Notas — horário de chegada, pedidos especiais, dúvidas...",
+    form_contact_label:"Como prefere ser contactado?", form_send:"Enviar pedido de reserva",
+    form_alert_fields:"Por favor, preencha nome e datas pretendidas.", form_alert_phone:"Por favor, indique o seu WhatsApp para que possamos contactá-lo.",
+    form_msg:"Olá Sofia! O meu nome é {nome}. Vi o site da Casa Aloé Vera e gostaria de reservar para {pessoas} pessoa(s) nas datas: {datas}. O meu e-mail: {email}. O meu WhatsApp: {tel}. Aguardo confirmação de disponibilidade e preço. Obrigado!"
+  },
+  en: {
+    nav_diff:"Features", nav_gallery:"Gallery", nav_reviews:"Reviews", nav_host:"Host", nav_book:"Book",
+    hero_tag:"Cidade Velha · Cape Verde · UNESCO",
+    hero_subtitle:"Panoramic ocean views · Constant sea breeze · Naturally cool stone architecture",
+    stat_rooms:"Bedrooms", stat_beds:"Beds", stat_guests:"Guests", stat_bath:"Bathroom",
+    badge_pool:"Pool", badge_wifi:"Wi-Fi", badge_solar:"Solar panels", badge_parking:"Parking", badge_breakfast:"Breakfast included",
+    hero_cta:"Book via WhatsApp", hero_cta2:"View photos",
+    hero_reviews:"· 108 reviews on Airbnb",
+    diff_tag:"Why choose us", diff_title:"What makes Casa Aloé Vera special",
+    d1_title:"Rustic & naturally cool", d1_text:"Built with traditional Cape Verdean stone, the house stays naturally cool — no air conditioning needed.",
+    d2_title:"Ocean views & constant breeze", d2_text:"Stunning Atlantic views — whales and dolphins can be spotted in certain seasons. Located 200m from the sea on elevated ground, the house benefits from natural wind all day long.",
+    d3_title:"Constant sea breeze", d3_text:"Located 200m from the sea on elevated ground, the house benefits from natural wind all day long.",
+    d4_title:"Pool", d4_text:"A rare luxury in this area. Swim with ocean views while listening to the distant waves.",
+    d5_title:"Sustainable & conscious", d5_text:"Solar panels and ventilated design reduce environmental impact. Clean energy in Atlantic paradise.",
+    d6_title:"Host family on-site", d6_text:"Sofia and her family live on the property. Full privacy with nearby support and personalised local tips.",
+    d7_title:"UNESCO World Heritage", d7_text:"Cidade Velha was Cape Verde's first capital. Historic centre 15 min walk away, full of history and culture.",
+    d8_title:"Direct booking = no fees", d8_text:"By booking directly with Sofia, you avoid platform fees and get a fairer price for both sides.",
+    d9_title:"Breakfast included", d9_text:"Start your day with a homemade breakfast included, with national products: egg, bread, seasonal tropical fruit, coffee and local products — so you can enjoy a relaxed morning without worrying about a thing.",
+    gal_tag:"Photography", gal_title:"The House in pictures", gal_all:"All", gal_ext:"Exterior & Pool", gal_view:"Ocean View", gal_rooms:"Bedrooms", gal_int:"Interior",
+    ph_facade:"Facade · Photo 1\nReplace with real link", ph_pool:"Pool · Photo 1\nReplace with real link",
+    ph_ext2:"Exterior · Photo 2\nReplace with real link", ph_view1:"Ocean View · Photo 1\nReplace with real link",
+    ph_view2:"Ocean View · Photo 2\nReplace with real link", ph_room1:"Bedroom 1\nReplace with real link",
+    ph_room2:"Bedroom 2\nReplace with real link", ph_living:"Living room\nReplace with real link",
+    ph_kitchen:"Kitchen\nReplace with real link",
+    gal_note:"💡 To add your photos: replace each [INSERT_PHOTO_...] with a direct image link.",
+    rev_tag:"What guests say", rev_title:"Reviews",
+    rev_count:"Based on 108 verified reviews on Airbnb",
+    rc_comm:"Communication", rc_clean:"Cleanliness", rc_acc:"Accuracy", rc_loc:"Location", rc_val:"Value", rc_arr:"Check-in",
+    r1_text:'"Communication 5.0. Sofia is super attentive. The house is exactly as in the photos, with an incredible sea view. We\'ll definitely be back!"',
+    r1_auth:"— Verified guest · Airbnb",
+    r2_text:'"Magical place! The sea breeze and coolness of the stone made all the difference. The pool with a view is a dream. We\'ll definitely return."',
+    r2_auth:"— Verified guest · Airbnb",
+    r3_text:'"Impeccable cleanliness, quiet and historic location. The host family was always helpful without being intrusive. Highly recommended."',
+    r3_auth:"— Verified guest · Airbnb",
+    r4_text:'"Cidade Velha is stunning and the house is the perfect refuge. Total independence, with Sofia\'s support always available via WhatsApp."',
+    r4_auth:"— Verified guest · Airbnb",
+    r5_text:'"Waking up to that ocean view is unforgettable. The house has a special soul, rustic and welcoming. Sofia makes you feel at home."',
+    r5_auth:"— Verified guest · Airbnb",
+    r_more:"View all reviews on Airbnb",
+    host_tag:"Your host", host_title:"Your host: Sofia",
+    host_bio:"I'm Sofia, Cape Verdean, mother of three boys, passionate about my culture, good food and simple moments around the table with friends.\n\nI work full-time in the development field at an international organisation, contributing to the sustainable development of my country. Casa Aloé Vera was born as a personal project — a space that reflects my love of hosting and creating welcoming environments.\n\nAlthough I'm not always present, I make sure everything is well prepared for a peaceful and comfortable stay.\n\nAt Casa Aloé Vera you'll find a serene atmosphere, attention to detail and everything you need to relax. I can suggest beautiful beaches, good restaurants and ideas to explore other islands — the best of Cape Verde, at your own pace.\n\nHere you'll find calm, the sea breeze and an experience with a true Cape Verdean identity.",
+    hs_years:"Years as host", hs_reviews:"Reviews", hs_rating:"Average rating", hs_lang:"PT & EN fluent",
+    book_tag:"Direct booking", book_title:"How to book & House rules",
+    book_how:"How to make your booking",
+    book_s1t:"Get in touch", book_s1d:"Send a WhatsApp message with your desired dates and number of guests.",
+    book_s2t:"Availability confirmation", book_s2d:"Sofia confirms availability and price in under 1 hour.",
+    book_s3t:"Booking payment (30%)", book_s3d:"Transfer 30% via Revolut to secure your dates. Email is shared in the chat.",
+    book_s4t:"Arrival & final payment (70%)", book_s4d:"The remaining 70% is paid on arrival in cash (euros or Cape Verdean escudos).",
+    book_pay:"Payment methods", book_times:"Times",
+    checkin:"Check-in", checkout:"Check-out",
+    book_flex:"🕐 I'm very flexible with arrival times — you can arrive at any time of day or night, even in the early hours. We always make the arrangements for a smooth arrival.",
+    rules_title:"House rules",
+    r_smoke:"No smoking inside the house",
+    r_pets:"Pets: by prior consultation via WhatsApp",
+    r_quiet:"Quiet hours from 10pm (peaceful residential neighbourhood)",
+    r_family:"Shared space: host family lives on the property — full privacy guaranteed but with nearby support",
+    r_sustain:"Sustainability: water and energy are precious resources on the island — please use consciously",
+    r_keys:"Personal welcome: Sofia or family always greets guests on arrival",
+    r_photos:"Share your photos with #CasaAloeVera on Instagram!",
+    wa_ready:"Ready to book? Talk directly to Sofia:",
+    loc_tag:"Getting here", loc_title:"Location",
+    loc_gmaps:"Open in Google Maps ↗",
+    loc_dist:"Distances",
+    loc_dist_text:"🏛️ Historic Centre (restaurants, monuments, crafts) — 1km • 15 min walk\n\n🏖️ Cidade Velha Beach — 1400m • 15 min\n\n🍽️ Local restaurants — 1400m • 15 min\n\n🚗 Praia city (capital) — 10 km • 15 min by car",
+    loc_transport:"Transport",
+    loc_transport_text:"✈️ Santiago International Airport (RAI) — 30 min taxi\n\n🚌 Hiace (public transport) from Praia to Cidade Velha — affordable and easy\n\n🅿️ Free parking on-site — no need to rent a car (but if you want to, parking is available)",
+    cta_tag:"Direct booking", cta_title:"Ready for your stay in Cape Verde?",
+    cta_text:"No platform fees. No complicated forms. Talk directly to Sofia and book your Casa Aloé Vera.",
+    cta_btn:"Book now via WhatsApp",
+    cta_alt:"See reviews on Airbnb: ",
+    footer_rights:"All rights reserved",
+    form_title:"Quick Booking", form_subtitle:"Fill in below and choose how you'd like to be contacted — Sofia replies in under 1 hour:",
+    form_name:"Full name", form_email:"Your e-mail", form_phone:"WhatsApp (e.g. +238 981 3071)", form_dates:"Desired dates (e.g. 15–20 Jul 2025)",
+    form_notes:"Notes — arrival time, special requests, questions...",
+    form_contact_label:"How would you prefer to be contacted?", form_send:"Send booking request",
+    form_alert_fields:"Please fill in your name and desired dates.", form_alert_phone:"Please provide your WhatsApp number so we can contact you.",
+    form_msg:"Hello Sofia! My name is {nome}. I found Casa Aloé Vera online and would like to book for {pessoas} person(s) on dates: {datas}. My e-mail: {email}. My WhatsApp: {tel}. Looking forward to your confirmation. Thank you!"
+  },
+  fr: {
+    nav_diff:"Atouts", nav_gallery:"Galerie", nav_reviews:"Avis", nav_host:"Hôtesse", nav_book:"Réserver",
+    hero_tag:"Cidade Velha · Cap-Vert · UNESCO",
+    hero_subtitle:"Vue panoramique sur la mer · Brise constante · Architecture en pierre naturellement fraîche",
+    stat_rooms:"Chambres", stat_beds:"Lits", stat_guests:"Voyageurs", stat_bath:"Salle de bain",
+    badge_pool:"Piscine", badge_wifi:"Wi-Fi", badge_solar:"Panneaux solaires", badge_parking:"Parking", badge_breakfast:"Petit-déjeuner inclus",
+    hero_cta:"Réserver via WhatsApp", hero_cta2:"Voir les photos",
+    hero_reviews:"· 108 avis sur Airbnb",
+    diff_tag:"Pourquoi nous choisir", diff_title:"Ce qui rend la Casa Aloé Vera unique",
+    d1_title:"Maison rustique & fraîche", d1_text:"Construite en pierre traditionnelle cap-verdienne, la maison reste naturellement fraîche sans climatisation.",
+    d2_title:"Vue panoramique & brise constante", d2_text:"Vue splendide sur l'Atlantique — des baleines et dauphins peuvent être observés en certaines saisons. Située à 200m de la mer en hauteur, la maison bénéficie d'un vent naturel toute la journée.",
+    d3_title:"Brise constante", d3_text:"Située à 200m de la mer en hauteur, la maison bénéficie d'un vent naturel toute la journée.",
+    d4_title:"Piscine", d4_text:"Un luxe rare dans cette région. Nagez avec vue sur l'océan en écoutant les vagues au loin.",
+    d5_title:"Durable & conscient", d5_text:"Panneaux solaires et design ventilé réduisent l'impact environnemental.",
+    d6_title:"Famille hôte sur place", d6_text:"Sofia et sa famille vivent sur la propriété. Intimité totale avec soutien proche et conseils locaux personnalisés.",
+    d7_title:"Patrimoine Mondial UNESCO", d7_text:"Cidade Velha fut la première capitale du Cap-Vert. Centre historique à 15 min à pied.",
+    d8_title:"Réservation directe = sans frais", d8_text:"En réservant directement avec Sofia, vous évitez les frais de plateforme.",
+    d9_title:"Petit-déjeuner inclus", d9_text:"Commencez la journée avec un petit-déjeuner maison inclus, avec des produits nationaux : œuf, pain, fruits tropicaux de saison, café et produits locaux — pour une matinée tranquille sans souci.",
+    gal_tag:"Photographie", gal_title:"La Maison en images", gal_all:"Toutes", gal_ext:"Extérieur & Piscine", gal_view:"Vue Mer", gal_rooms:"Chambres", gal_int:"Intérieur",
+    ph_facade:"Façade · Photo 1", ph_pool:"Piscine · Photo 1", ph_ext2:"Extérieur · Photo 2",
+    ph_view1:"Vue Mer · Photo 1", ph_view2:"Vue Mer · Photo 2", ph_room1:"Chambre 1",
+    ph_room2:"Chambre 2", ph_living:"Salon", ph_kitchen:"Cuisine",
+    gal_note:"💡 Pour ajouter vos photos : remplacez chaque [INSÉRER_PHOTO_...] par un lien direct vers l'image.",
+    rev_tag:"Ce que disent les voyageurs", rev_title:"Avis",
+    rev_count:"Basé sur 108 avis vérifiés sur Airbnb",
+    rc_comm:"Communication", rc_clean:"Propreté", rc_acc:"Exactitude", rc_loc:"Emplacement", rc_val:"Rapport qualité-prix", rc_arr:"Arrivée",
+    r1_text:'"Communication 5.0. Sofia est très attentionnée. La maison est exactement comme sur les photos, avec une vue incroyable sur la mer."',
+    r1_auth:"— Voyageur vérifié · Airbnb",
+    r2_text:'"Endroit magique ! La brise marine et la fraîcheur de la pierre ont fait toute la différence. La piscine avec vue est un rêve."',
+    r2_auth:"— Voyageur vérifié · Airbnb",
+    r3_text:'"Propreté impeccable, emplacement calme et historique. La famille hôte a toujours été serviable sans être intrusive. Vivement recommandé."',
+    r3_auth:"— Voyageur vérifié · Airbnb",
+    r4_text:'"Cidade Velha est magnifique et la maison est le refuge parfait. Indépendance totale, avec le soutien de Sofia toujours disponible."',
+    r4_auth:"— Voyageur vérifié · Airbnb",
+    r5_text:'"Se réveiller avec cette vue sur l\'océan est inoubliable. La maison a une âme spéciale, rustique et accueillante."',
+    r5_auth:"— Voyageur vérifié · Airbnb",
+    r_more:"Voir tous les avis sur Airbnb",
+    host_tag:"Votre hôtesse", host_title:"Votre hôtesse : Sofia",
+    host_bio:"Je suis Sofia, cap-verdienne, mère de trois garçons, passionnée par ma culture, la bonne cuisine et les moments simples à table entre amis.\n\nJe travaille à temps plein dans le domaine du développement au sein d'une organisation internationale. La Casa Aloé Vera est née comme un projet personnel — un espace qui reflète mon goût pour le bien recevoir.\n\nMême si je ne suis pas toujours présente, je veille à ce que tout soit bien préparé pour un séjour tranquille et confortable.\n\nVous y trouverez une atmosphère sereine et l'essentiel pour vous détendre. Je peux suggérer de belles plages, de bons restaurants et des idées pour explorer d'autres îles — le meilleur du Cap-Vert, à votre rythme.\n\nIci, vous trouverez le calme, la brise marine et une expérience avec une identité cap-verdienne authentique.",
+    hs_years:"Ans d'expérience", hs_reviews:"Avis", hs_rating:"Note moyenne", hs_lang:"PT & EN courant",
+    book_tag:"Réservation directe", book_title:"Comment réserver & Règles de la maison",
+    book_how:"Comment faire votre réservation",
+    book_s1t:"Prenez contact", book_s1d:"Envoyez un message WhatsApp avec vos dates souhaitées et le nombre de voyageurs.",
+    book_s2t:"Confirmation de disponibilité", book_s2d:"Sofia confirme la disponibilité et le prix en moins d'1 heure.",
+    book_s3t:"Acompte de réservation (30%)", book_s3d:"Transférez 30% via Revolut pour sécuriser vos dates.",
+    book_s4t:"Arrivée & paiement final (70%)", book_s4d:"Les 70% restants sont payés à l'arrivée en espèces.",
+    book_pay:"Méthodes de paiement", book_times:"Horaires",
+    checkin:"Arrivée", checkout:"Départ",
+    book_flex:"🕐 Je suis très flexible sur les horaires — vous pouvez arriver à toute heure du jour ou de la nuit, même en pleine nuit. Nous organisons toujours les conditions pour une arrivée sereine.",
+    rules_title:"Règles de la maison",
+    r_smoke:"Interdit de fumer à l'intérieur",
+    r_pets:"Animaux : sur consultation préalable via WhatsApp",
+    r_quiet:"Silence à partir de 22h",
+    r_family:"Espace partagé : la famille vit sur la propriété — intimité garantie avec soutien proche",
+    r_sustain:"Durabilité : eau et énergie sont précieuses — utilisez avec conscience",
+    r_keys:"Accueil personnalisé : Sofia ou sa famille accueille toujours les voyageurs",
+    r_photos:"Partagez vos photos avec #CasaAloeVera sur Instagram !",
+    wa_ready:"Prêt à réserver ? Parlez directement à Sofia :",
+    loc_tag:"Comment venir", loc_title:"Localisation",
+    loc_gmaps:"Ouvrir dans Google Maps ↗",
+    loc_dist:"Distances",
+    loc_dist_text:"🏛️ Centre Historique (restaurants, monuments, artisanat) — 1km • 15 min à pied\n\n🏖️ Plage de Cidade Velha — 1400m • 15 min\n\n🍽️ Restaurants locaux — 1400m • 15 min\n\n🚗 Ville de Praia (capitale) — 10 km • 15 min en voiture",
+    loc_transport:"Transport",
+    loc_transport_text:"✈️ Aéroport International de Santiago (RAI) — 30 min en taxi\n\n🚌 Hiace (transport public) de Praia à Cidade Velha — accessible et économique\n\n🅿️ Parking gratuit sur place — pas besoin de louer une voiture (mais si vous souhaitez, nous avons un parking)",
+    cta_tag:"Réservation directe", cta_title:"Prêt pour votre séjour au Cap-Vert ?",
+    cta_text:"Sans frais de plateforme. Sans formulaires compliqués. Parlez directement à Sofia.",
+    cta_btn:"Réserver maintenant via WhatsApp",
+    cta_alt:"Voir les avis sur Airbnb : ",
+    footer_rights:"Tous droits réservés",
+    form_title:"Réservation rapide", form_subtitle:"Remplissez ci-dessous et choisissez comment être contacté — Sofia répond en moins d'1 heure :",
+    form_name:"Nom complet", form_email:"Votre e-mail", form_phone:"WhatsApp (ex: +238 981 3071)", form_dates:"Dates souhaitées (ex: 15–20 juil. 2025)",
+    form_notes:"Notes — heure d'arrivée, demandes spéciales, questions...",
+    form_contact_label:"Comment préférez-vous être contacté ?", form_send:"Envoyer la demande de réservation",
+    form_alert_fields:"Veuillez renseigner votre nom et les dates souhaitées.", form_alert_phone:"Veuillez indiquer votre WhatsApp pour que nous puissions vous contacter.",
+    form_msg:"Bonjour Sofia ! Je m'appelle {nome}. J'ai vu le site de la Casa Aloé Vera et souhaite réserver pour {pessoas} personne(s) aux dates : {datas}. Mon e-mail : {email}. Mon WhatsApp : {tel}. Dans l'attente de votre confirmation. Merci !"
+  },
+  es: {
+    nav_diff:"Ventajas", nav_gallery:"Galería", nav_reviews:"Opiniones", nav_host:"Anfitriona", nav_book:"Reservar",
+    hero_tag:"Cidade Velha · Cabo Verde · UNESCO",
+    hero_subtitle:"Vista panorámica del mar · Brisa constante · Arquitectura de piedra naturalmente fresca",
+    stat_rooms:"Habitaciones", stat_beds:"Camas", stat_guests:"Huéspedes", stat_bath:"Baño",
+    badge_pool:"Piscina", badge_wifi:"Wi-Fi", badge_solar:"Paneles solares", badge_parking:"Aparcamiento", badge_breakfast:"Desayuno incluido",
+    hero_cta:"Reservar por WhatsApp", hero_cta2:"Ver fotos",
+    hero_reviews:"· 108 opiniones en Airbnb",
+    diff_tag:"Por qué elegirnos", diff_title:"Lo que hace especial a Casa Aloé Vera",
+    d1_title:"Casa rústica y fresca", d1_text:"Construida en piedra tradicional caboverdiana, la casa se mantiene naturalmente fresca sin necesidad de aire acondicionado.",
+    d2_title:"Vista panorámica & brisa constante", d2_text:"Vista impresionante del Atlántico — se pueden avistar ballenas y delfines en ciertas épocas. Ubicada a 200m del mar en un punto elevado, la casa se beneficia de viento natural todo el día.",
+    d3_title:"Brisa constante", d3_text:"Ubicada a 200m del mar en un punto elevado, la casa se beneficia de viento natural todo el día.",
+    d4_title:"Piscina", d4_text:"Un lujo poco común en la zona. Nada con vistas al océano escuchando las olas a lo lejos.",
+    d5_title:"Sostenible y consciente", d5_text:"Paneles solares y diseño ventilado reducen el impacto ambiental.",
+    d6_title:"Familia anfitriona en el lugar", d6_text:"Sofia y su familia viven en la propiedad. Privacidad total con apoyo cercano y consejos locales personalizados.",
+    d7_title:"Patrimonio Mundial UNESCO", d7_text:"Cidade Velha fue la primera capital de Cabo Verde. Centro histórico a 15 min andando.",
+    d8_title:"Reserva directa = sin comisiones", d8_text:"Al reservar directamente con Sofia, evitas las comisiones de plataforma.",
+    d9_title:"Desayuno incluido", d9_text:"Empieza el día con un desayuno casero incluido, con productos nacionales: huevo, pan, fruta tropical de temporada, café y productos locales — para que disfrutes una mañana tranquila sin preocuparte por nada.",
+    gal_tag:"Fotografía", gal_title:"La Casa en imágenes", gal_all:"Todas", gal_ext:"Exterior y Piscina", gal_view:"Vista Mar", gal_rooms:"Habitaciones", gal_int:"Interior",
+    ph_facade:"Fachada · Foto 1", ph_pool:"Piscina · Foto 1", ph_ext2:"Exterior · Foto 2",
+    ph_view1:"Vista Mar · Foto 1", ph_view2:"Vista Mar · Foto 2", ph_room1:"Habitación 1",
+    ph_room2:"Habitación 2", ph_living:"Salón", ph_kitchen:"Cocina",
+    gal_note:"💡 Para agregar tus fotos: reemplaza cada [INSERTAR_FOTO_...] con un enlace directo a la imagen.",
+    rev_tag:"Opiniones de huéspedes", rev_title:"Opiniones",
+    rev_count:"Basado en 108 opiniones verificadas en Airbnb",
+    rc_comm:"Comunicación", rc_clean:"Limpieza", rc_acc:"Exactitud", rc_loc:"Ubicación", rc_val:"Valor", rc_arr:"Check-in",
+    r1_text:'"Comunicación 5.0. Sofia es muy atenta. La casa es exactamente como en las fotos, con una vista increíble al mar."',
+    r1_auth:"— Huésped verificado · Airbnb",
+    r2_text:'"¡Lugar mágico! La brisa del mar y el frescor de la piedra marcaron la diferencia. La piscina con vistas es un sueño."',
+    r2_auth:"— Huésped verificado · Airbnb",
+    r3_text:'"Limpieza impecable, ubicación tranquila e histórica. La familia anfitriona siempre fue servicial sin ser intrusiva. Muy recomendado."',
+    r3_auth:"— Huésped verificado · Airbnb",
+    r4_text:'"Cidade Velha es impresionante y la casa es el refugio perfecto. Independencia total, con el apoyo de Sofia siempre disponible."',
+    r4_auth:"— Huésped verificado · Airbnb",
+    r5_text:'"Despertar con esa vista al océano es inolvidable. La casa tiene un alma especial, rústica y acogedora."',
+    r5_auth:"— Huésped verificado · Airbnb",
+    r_more:"Ver todas las opiniones en Airbnb",
+    host_tag:"Tu anfitriona", host_title:"Tu anfitriona: Sofia",
+    host_bio:"Soy Sofia, caboverdiana, madre de tres hijos, apasionada por mi cultura, la buena comida y los momentos sencillos en la mesa con amigos.\n\nTrabajo a tiempo completo en el ámbito del desarrollo en una organización internacional. La Casa Aloé Vera nació como un proyecto personal — un espacio que refleja mi gusto por recibir bien y crear ambientes acogedores.\n\nAunque no siempre estoy presente, me aseguro de que todo esté bien preparado para una estancia tranquila y confortable.\n\nEncontrarás un ambiente sereno y todo lo esencial para relajarte. Puedo sugerir playas bonitas, buenos restaurantes e ideas para explorar otras islas — lo mejor de Cabo Verde, a tu ritmo.\n\nAquí encontrarás calma, la brisa del mar y una experiencia con identidad caboverdiana.",
+    hs_years:"Años como anfitriona", hs_reviews:"Opiniones", hs_rating:"Nota media", hs_lang:"PT & EN fluido",
+    book_tag:"Reserva directa", book_title:"Cómo reservar y Normas de la casa",
+    book_how:"Cómo hacer tu reserva",
+    book_s1t:"Ponte en contacto", book_s1d:"Envía un mensaje de WhatsApp con las fechas deseadas y número de huéspedes.",
+    book_s2t:"Confirmación de disponibilidad", book_s2d:"Sofia confirma disponibilidad y precio en menos de 1 hora.",
+    book_s3t:"Pago de reserva (30%)", book_s3d:"Transfiere el 30% por Revolut para asegurar las fechas.",
+    book_s4t:"Llegada y pago final (70%)", book_s4d:"El 70% restante se paga a la llegada en efectivo.",
+    book_pay:"Métodos de pago", book_times:"Horarios",
+    checkin:"Check-in", checkout:"Check-out",
+    book_flex:"🕐 Soy muy flexible con los horarios — puedes llegar a cualquier hora del día o de la noche, incluso de madrugada. Siempre creamos las condiciones para una llegada tranquila.",
+    rules_title:"Normas de la casa",
+    r_smoke:"Prohibido fumar dentro de la casa",
+    r_pets:"Mascotas: previa consulta por WhatsApp",
+    r_quiet:"Silencio a partir de las 22h",
+    r_family:"Espacio compartido: la familia vive en la propiedad — privacidad garantizada con apoyo cercano",
+    r_sustain:"Sostenibilidad: agua y energía son recursos valiosos en la isla",
+    r_keys:"Bienvenida personal: Sofia o familia siempre recibe a los huéspedes",
+    r_photos:"¡Comparte tus fotos con #CasaAloeVera en Instagram!",
+    wa_ready:"¿Listo para reservar? Habla directamente con Sofia:",
+    loc_tag:"Cómo llegar", loc_title:"Ubicación",
+    loc_gmaps:"Abrir en Google Maps ↗",
+    loc_dist:"Distancias",
+    loc_dist_text:"🏛️ Centro Histórico (restaurantes, monumentos, artesanía) — 1km • 15 min andando\n\n🏖️ Playa de Cidade Velha — 1400m • 15 min\n\n🍽️ Restaurantes locales — 1400m • 15 min\n\n🚗 Ciudad de Praia (capital) — 10 km • 15 min en coche",
+    loc_transport:"Transporte",
+    loc_transport_text:"✈️ Aeropuerto Internacional de Santiago (RAI) — 30 min en taxi\n\n🚌 Hiace (transporte público) de Praia a Cidade Velha — accesible y económico\n\n🅿️ Aparcamiento gratuito en el lugar — sin necesidad de alquilar coche (pero si quieres, tenemos aparcamiento)",
+    cta_tag:"Reserva directa", cta_title:"¿Listo para tu estancia en Cabo Verde?",
+    cta_text:"Sin comisiones de plataforma. Sin formularios complicados. Habla directamente con Sofia.",
+    cta_btn:"Reservar ahora por WhatsApp",
+    cta_alt:"Ver opiniones en Airbnb: ",
+    footer_rights:"Todos los derechos reservados",
+    form_title:"Reserva Rápida", form_subtitle:"Rellena el formulario y elige cómo quieres ser contactado — Sofia responde en menos de 1 hora:",
+    form_name:"Nombre completo", form_email:"Tu e-mail", form_phone:"WhatsApp (ej: +238 981 3071)", form_dates:"Fechas deseadas (ej: 15–20 Jul 2025)",
+    form_notes:"Notas — hora de llegada, solicitudes especiales, preguntas...",
+    form_contact_label:"¿Cómo prefieres ser contactado?", form_send:"Enviar solicitud de reserva",
+    form_alert_fields:"Por favor, rellena tu nombre y las fechas deseadas.", form_alert_phone:"Por favor, indica tu WhatsApp para que podamos contactarte.",
+    form_msg:"¡Hola Sofia! Me llamo {nome}. Vi el sitio de Casa Aloé Vera y me gustaría reservar para {pessoas} persona(s) en las fechas: {datas}. Mi e-mail: {email}. Mi WhatsApp: {tel}. Espero tu confirmación. ¡Gracias!"
+  }
+};
+
+let currentLang = 'pt';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(b => { if(b.textContent.toLowerCase()===lang) b.classList.add('active'); });
+  const t = i18n[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if(t[key] !== undefined) {
+      const val = t[key];
+      // Se o valor tem \n ou <br>, usar innerHTML para preservar quebras de linha
+      if(val.includes('\n') || val.includes('<br>')) {
+        el.innerHTML = val.replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
+      } else {
+        el.textContent = val;
+      }
+    }
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if(t[key] !== undefined) el.placeholder = t[key];
+  });
+}
+
+// ---- RESERVA RÁPIDA ----
+function enviarReservaRapida() {
+  const nome  = document.getElementById('rr_nome').value.trim();
+  const email = document.getElementById('rr_email').value.trim();
+  const tel   = document.getElementById('rr_tel').value.trim();
+  const datas = document.getElementById('rr_datas').value.trim();
+  const pess  = document.getElementById('rr_pessoas').value;
+  const notas = document.getElementById('rr_notas').value.trim();
+  const cont  = document.querySelector('input[name="rr_contato"]:checked').value;
+  const t     = i18n[currentLang] || i18n.pt;
+
+  if (!nome || !datas) { alert(t.form_alert_fields); return; }
+  if (cont === 'whatsapp' && !tel) { alert(t.form_alert_phone); return; }
+
+  let msg = (t.form_msg || '')
+    .replace('{nome}', nome).replace('{pessoas}', pess)
+    .replace('{datas}', datas).replace('{email}', email || '—')
+    .replace('{tel}', tel || '—');
+
+  if (notas) msg += '\n\nNotas: ' + notas;
+
+  if (cont === 'whatsapp') {
+    window.open('https://wa.me/2389813071?text=' + encodeURIComponent(msg), '_blank');
+  } else {
+    // Abre Gmail Compose directamente (mais fiável que mailto:)
+    const subj = 'Pedido de reserva – Casa Aloé Vera – ' + nome;
+    const gmailUrl = 'https://mail.google.com/mail/?view=cm'
+      + '&to=silvasofia%40gmail.com'
+      + '&su=' + encodeURIComponent(subj)
+      + '&body=' + encodeURIComponent(msg);
+    window.open(gmailUrl, '_blank');
+  }
+}
+
+// Gallery filter
+function filterGallery(cat, btn) {
+  document.querySelectorAll('.gallery-cat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    if(cat === 'all' || item.dataset.cat === cat) { item.style.display = ''; }
+    else { item.style.display = 'none'; }
+  });
+}
+
+// Lightbox
+function openLightbox(src) {
+  if(!src || src.startsWith('[')) return;
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(); });
+
+// Smooth nav hide on mobile
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open'));
+});
+</script>
+</body>
+</html>
