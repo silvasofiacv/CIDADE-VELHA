@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Casa Aloé Vera · Guest Guide</title>
+<style>
+  :root{
+    --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb;
+    --green:#3d7a5d; --green-soft:#eaf3ee; --sand:#faf8f4;
+    --accent:#0e7490; --card:#ffffff; --radius:14px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:var(--sand); line-height:1.6; font-size:16px;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:0 18px 80px}
+  .lang-block[hidden]{display:none}
+
+  header{
+    position:relative;
+    background:linear-gradient(160deg,#2f5f48,#3d7a5d 60%,#5a9a78);
+    color:#fff; text-align:center; padding:56px 20px 44px;
+  }
+  .lang-top{position:absolute; top:14px; right:14px; display:flex; gap:6px}
+  .lang-top button{
+    border:1px solid rgba(255,255,255,.45); background:rgba(255,255,255,.12); color:#fff;
+    padding:5px 11px; border-radius:999px; font-size:12.5px; font-weight:700; cursor:pointer;
+  }
+  .lang-top button.active{background:#fff; color:var(--green); border-color:#fff}
+  .hero-btns{display:flex; gap:10px; justify-content:center; margin-top:20px; flex-wrap:wrap}
+  .hero-btn{
+    text-decoration:none; font-size:14px; font-weight:700; padding:10px 18px; border-radius:999px;
+    background:rgba(255,255,255,.14); color:#fff; border:1px solid rgba(255,255,255,.4);
+  }
+  .hero-btn.wa{background:#25D366; border-color:#25D366}
+  header .emoji{font-size:44px}
+  header h1{font-size:30px; font-weight:700; letter-spacing:-.02em; margin:8px 0 4px}
+  header p{opacity:.9; font-size:15px}
+
+  nav{
+    position:sticky; top:0; z-index:50; background:rgba(250,248,244,.95);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+    overflow-x:auto; white-space:nowrap; -webkit-overflow-scrolling:touch;
+  }
+  nav .inner{max-width:720px; margin:0 auto; padding:10px 14px; display:flex; gap:8px; align-items:center}
+  nav a{
+    text-decoration:none; color:var(--green); background:var(--green-soft);
+    border:1px solid #d5e6dc; padding:6px 13px; border-radius:999px; font-size:13.5px; font-weight:600;
+  }
+
+  section{margin-top:34px}
+  h2{
+    font-size:21px; font-weight:700; letter-spacing:-.01em;
+    display:flex; align-items:center; gap:10px; margin-bottom:14px;
+    scroll-margin-top:70px;
+  }
+  h3{font-size:16px; font-weight:700; margin:18px 0 8px}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:18px 20px; margin-bottom:14px; box-shadow:0 1px 2px rgba(0,0,0,.03);
+  }
+  .muted{color:var(--muted); font-size:14px}
+  ul{padding-left:20px; margin:6px 0}
+  li{margin:5px 0}
+  a{color:var(--accent)}
+
+  .wifi{display:flex; flex-direction:column; gap:10px}
+  .wifi-row{
+    display:flex; justify-content:space-between; align-items:center; gap:10px;
+    background:var(--green-soft); border-radius:10px; padding:12px 14px;
+  }
+  .wifi-row b{font-size:17px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .copy{
+    border:1px solid #cbdcd2; background:#fff; color:var(--green);
+    border-radius:8px; padding:6px 12px; font-size:13px; font-weight:600; cursor:pointer;
+  }
+
+  .contact{display:flex; justify-content:space-between; align-items:center; gap:10px; padding:11px 0; border-bottom:1px solid var(--line)}
+  .contact:last-child{border-bottom:none}
+  .contact .who b{display:block; font-size:15.5px}
+  .contact .who span{font-size:13px; color:var(--muted)}
+  .btns{display:flex; gap:8px; flex-shrink:0}
+  .btn{text-decoration:none; font-size:13px; font-weight:700; padding:7px 12px; border-radius:8px}
+  .btn.wa{background:#e7f6ec; color:#1a7f4b}
+  .btn.tel{background:#eef2ff; color:#4054b2}
+  .btn.map{background:#fef3e2; color:#b45309}
+
+  .emergency{background:#fff5f5; border-color:#fecaca}
+  .emergency .num{font-weight:800; font-size:18px}
+
+  table{width:100%; border-collapse:collapse; font-size:15px; margin-top:8px}
+  th,td{text-align:left; padding:9px 8px; border-bottom:1px solid var(--line)}
+  th{font-size:13px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted)}
+  tr:last-child td{border-bottom:none}
+
+  details{border:1px solid var(--line); border-radius:var(--radius); background:#fff; margin-bottom:12px; overflow:hidden}
+  summary{
+    cursor:pointer; padding:15px 18px; font-weight:700; font-size:16px;
+    list-style:none; display:flex; justify-content:space-between; align-items:center;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+"; font-size:20px; color:var(--muted); font-weight:400}
+  details[open] summary::after{content:"–"}
+  details .body{padding:0 18px 16px}
+
+  .note{background:#fffbeb; border:1px solid #fde68a; border-radius:10px; padding:12px 14px; font-size:14.5px; margin:10px 0}
+  .tip{background:var(--green-soft); border:1px solid #d5e6dc; border-radius:10px; padding:12px 14px; font-size:14.5px; margin:10px 0}
+
+  figure{margin:12px 0}
+  .photo{width:100%; border-radius:12px; display:block; border:1px solid var(--line)}
+  figcaption{font-size:13px; color:var(--muted); text-align:center; margin-top:6px}
+
+  .price-line{display:flex; justify-content:space-between; gap:12px; padding:7px 0; border-bottom:1px dashed var(--line); font-size:15px}
+  .price-line:last-child{border-bottom:none}
+  .price-line b{white-space:nowrap}
+
+  footer{text-align:center; margin-top:48px; color:var(--muted); font-size:13.5px}
+  footer .heart{color:#e0654f}
+</style>
+</head>
+<body>
+
+<!-- ============ ENGLISH ============ -->
+<div class="lang-block" data-lang="en" lang="en">
+<header>
+  <div class="lang-top"><button onclick="setLang('pt')">PT</button><button class="active" onclick="setLang('en')">EN</button><button onclick="setLang('fr')">FR</button></div>
+  <div class="emoji">🌵</div>
+  <h1>Casa Aloé Vera</h1>
+  <p>Guest Guide · Encosta Azul, Cidade Velha · Cabo Verde</p>
+  <div class="hero-btns">
+    <a class="hero-btn" href="https://www.cidadevelha.org">🏠 Home · cidadevelha.org</a>
+    <a class="hero-btn wa" href="https://wa.me/2389813071">💬 Contact Sofia on WhatsApp</a>
+  </div>
+</header>
+
+<nav><div class="inner">
+  <a href="#wifi-en">📶 WiFi</a>
+  <a href="#contacts-en">☎️ Contacts</a>
+  <a href="#arrival-en">📍 Arrival</a>
+  <a href="#transport-en">🚕 Transport</a>
+  <a href="#stay-en">🏡 Your Stay</a>
+  <a href="#guides-en">👋 Guides</a>
+  <a href="#money-en">💶 Money & SIM</a>
+  <a href="#explore-en">🗺️ Explore</a>
+</div></nav>
+
+<div class="wrap">
+
+<section id="wifi-en">
+  <h2>📶 Free WiFi</h2>
+  <div class="card wifi">
+    <div class="wifi-row"><div><span class="muted">Network</span><br><b>NETSOFIA</b></div><button class="copy" data-copy="NETSOFIA">Copy</button></div>
+    <div class="wifi-row"><div><span class="muted">Password</span><br><b>ABOEHBAKAM</b></div><button class="copy" data-copy="ABOEHBAKAM">Copy</button></div>
+    <div class="wifi-row"><div><span class="muted">Pool area · Encosta Azul Starlink</span><br><b>Cabo.Verde@2025</b></div><button class="copy" data-copy="Cabo.Verde@2025">Copy</button></div>
+  </div>
+</section>
+
+<section id="contacts-en">
+  <h2>☎️ We're here to help</h2>
+  <div class="card">
+    <div class="contact"><div class="who"><b>Sofia</b><span>Your host</span></div><div class="btns"><a class="btn wa" href="https://wa.me/2389813071">WhatsApp</a><a class="btn tel" href="tel:+2389813071">Call</a></div></div>
+    <div class="contact"><div class="who"><b>Sonia</b><span>Support, cleaning & breakfast</span></div><div class="btns"><a class="btn wa" href="https://wa.me/2389354301">WhatsApp</a><a class="btn tel" href="tel:+2389354301">Call</a></div></div>
+    <div class="contact"><div class="who"><b>Jorge</b><span>Sofia's father</span></div><div class="btns"><a class="btn wa" href="https://wa.me/2389912103">WhatsApp</a><a class="btn tel" href="tel:+2389912103">Call</a></div></div>
+    <div class="contact"><div class="who"><b>Kenedy</b><span>Taxi – Praia</span></div><div class="btns"><a class="btn wa" href="https://wa.me/2389230569">WhatsApp</a><a class="btn tel" href="tel:+2389230569">Call</a></div></div>
+    <div class="contact"><div class="who"><b>Kenedy</b><span>Taxi – Cidade Velha (same name, different person 😄)</span></div><div class="btns"><a class="btn wa" href="https://wa.me/2389128261">WhatsApp</a><a class="btn tel" href="tel:+2389128261">Call</a></div></div>
+  </div>
+  <div class="card emergency">
+    <h3 style="margin-top:0">🆘 Emergency</h3>
+    <div class="contact"><div class="who"><b>Police</b></div><a class="btn tel num" href="tel:132">132</a></div>
+    <div class="contact"><div class="who"><b>Ambulance</b></div><a class="btn tel num" href="tel:123">123</a></div>
+    <div class="contact"><div class="who"><b>Cidade Velha Health Post</b></div><a class="btn tel" href="tel:+2389864979">+238 986 49 79</a></div>
+  </div>
+</section>
+
+<section id="arrival-en">
+  <h2>📍 Location & Arrival</h2>
+  <div class="card">
+    <p><b>Google Maps:</b> search for <b>“Encosta Azul, Cidade Velha”</b></p>
+    <p style="margin-top:8px"><a class="btn map" href="https://www.google.com/maps/search/Encosta+Azul,+Cidade+Velha">Open in Google Maps</a></p>
+    <h3>🚪 Gate – Salineiro Hill</h3>
+    <ul>
+      <li>The condominium gate is on the Salineiro hill road, on the <b>left-hand side</b>.</li>
+      <li>The gate is manual — simply slide/push it to the side.</li>
+      <li>Please always close it properly, for safety and to keep animals out.</li>
+      <li>By taxi? Tell the driver: <b>“Salineiro hill — gate on the left.”</b></li>
+      <li>Both Kenedy drivers know the exact location.</li>
+    </ul>
+    <h3>🧭 How to find the house</h3>
+    <figure><img class="photo" src="https://drive.google.com/thumbnail?id=1Hhh3uxpdJX5z0anotUgDIKUfBeTs-GpN&sz=w1200" alt="Guided map — how to reach the house" loading="lazy"><figcaption>Guided map — how to reach the house</figcaption></figure>
+    <figure><img class="photo" src="https://drive.google.com/thumbnail?id=135wHvFU6SMB3Oc8-qH99j9giSFisE-R3&sz=w1200" alt="Front of the house" loading="lazy"><figcaption>Front of the house — compare before entering</figcaption></figure>
+    <div class="note">⚠️ The house is in a <b>private condominium</b> with several similar stone houses. Compare with the photo to make sure you're at the right one — and message us if unsure, it's completely normal to get confused the first time!</div>
+    <ul>
+      <li>Streets in Cabo Verde rarely have visible names or signs.</li>
+      <li>A regular taxi from Praia may not know this condominium.</li>
+      <li>To avoid issues: use the Google Maps address, mention <b>Salineiro hill</b>, and whenever possible use one of the Kenedy drivers.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="transport-en">
+  <h2>🚕 Getting Around</h2>
+  <details>
+    <summary>🚐 Yace / “Colectivo” — local minibus</summary>
+    <div class="body">
+      <p>A Toyota Hiace minibus — very affordable and widely used by locals.</p>
+      <h3>How to catch it from the house</h3>
+      <ul><li>Walk up to the main road and stand on the corner.</li><li>Raise your hand when a Yace passes — they always stop.</li></ul>
+      <h3>Approximate prices</h3>
+      <div class="price-line"><span>House → Cidade Velha Center</span><b>50 CVE / €0.50</b></div>
+      <div class="price-line"><span>Cidade Velha → Praia (Sucupira)</span><b>100 CVE / €1</b></div>
+      <div class="price-line"><span>Praia → Tarrafal (only from Praia)</span><b>1,000 CVE / €10</b></div>
+      <h3>Returning to Cidade Velha — catch it at</h3>
+      <ul><li>Sucupira Market</li><li>Terra Branca Roundabout</li><li>Palmarejo (Braz) Roundabout</li></ul>
+      <p class="muted">No fixed timetable — it leaves when full. Most frequent on weekdays until 6 pm.</p>
+    </div>
+  </details>
+  <details>
+    <summary>🚖 Taxi — the two Kenedys</summary>
+    <div class="body">
+      <div class="contact"><div class="who"><b>Kenedy – Praia</b></div><a class="btn wa" href="https://wa.me/2389230569">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Kenedy – Cidade Velha</b></div><a class="btn wa" href="https://wa.me/2389128261">WhatsApp</a></div>
+      <ul><li>Reliable, know the condominium and exact route to the house.</li><li>Available day and night. No confusion with location or pricing.</li></ul>
+      <h3>Average prices</h3>
+      <div class="price-line"><span>House → Cidade Velha Center</span><b>300 CVE / €3</b></div>
+      <div class="price-line"><span>Praia → any neighborhood</span><b>150–300 CVE / €1.5–3</b></div>
+      <div class="price-line"><span>Airport → Praia</span><b>1,000–2,000 CVE / €10–20</b></div>
+      <div class="price-line"><span>Airport → Cidade Velha</span><b>2,500 (day) / 3,000 CVE (night)</b></div>
+      <div class="price-line"><span>Airport → Tarrafal</span><b>6,000 (day) / 8,000 CVE (night)</b></div>
+      <div class="note">⚠️ Airport taxis tend to charge more — <b>always negotiate in advance!</b> Whenever possible, call one of the Kenedys.</div>
+    </div>
+  </details>
+  <details>
+    <summary>🚗 Car rental — highly recommended</summary>
+    <div class="body">
+      <p>Driving in Cabo Verde is easy and safe, and a car gives you freedom to explore the island. From <b>€50/day</b>.</p>
+      <h3>Recommended contacts (WhatsApp)</h3>
+      <div class="contact"><div class="who"><b>Mario Amaro</b><span>By far the most recommended — only 2 cars</span></div><a class="btn wa" href="https://wa.me/2389530000">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Cipriano</b></div><a class="btn wa" href="https://wa.me/2389918902">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Kenedy – Praia</b><span>Also rents cars</span></div><a class="btn wa" href="https://wa.me/2389230569">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Miguel</b></div><a class="btn wa" href="https://wa.me/2385958876">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Hertz</b></div><a class="btn wa" href="https://wa.me/2389917907">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Fernando</b></div><a class="btn wa" href="https://wa.me/2389941393">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Marlon</b></div><a class="btn wa" href="https://wa.me/2389703359">WhatsApp</a></div>
+      <p class="muted">Do some research too — there are many options nowadays.</p>
+    </div>
+  </details>
+</section>
+
+<section id="stay-en">
+  <h2>🏡 Your Stay</h2>
+  <details open>
+    <summary>🥖 Breakfast</summary>
+    <div class="body">
+      <ul>
+        <li>Served <b>Monday–Saturday, 8:15–10:00</b>, on the balcony.</li>
+        <li>Usually: coffee and/or tea, bread, eggs, fruit, yogurt, and juice.</li>
+        <li>Let us know if you prefer coffee or tea, and how you like your eggs.</li>
+        <li>Please leave the dishes outside so we can collect them.</li>
+      </ul>
+      <h3>Sundays & holidays — breakfast basket</h3>
+      <ul><li>The evening before, we leave a tray with breakfast items.</li><li>Refrigerated products are in the fridge; bread is in the freezer.</li></ul>
+      <div class="tip">💡 <b>Tip:</b> take the bread out of the freezer 10 minutes before eating — it will be fresh. This is the method we use daily, as Cidade Velha has no bakery.</div>
+      <div class="note">🐶 Please mind the dogs and cats — they tend to steal food. Don't feed them at the table to avoid creating the habit.</div>
+      <p class="muted"><i>Any dietary restrictions or preferences? Just tell us.</i></p>
+    </div>
+  </details>
+  <details>
+    <summary>💧 Water & shower</summary>
+    <div class="body">
+      <ul><li>Hot water is available <b>only in the shower</b>.</li><li>An electric pump provides good pressure — if it ever feels low, tell us and we'll fix it right away.</li></ul>
+      <p class="muted"><i>Please take quick showers — water is a scarce resource in Cape Verde. 🙏</i></p>
+    </div>
+  </details>
+  <details>
+    <summary>🖐️ Checkout & cleaning</summary>
+    <div class="body">
+      <p><b>Checkout is at 11:00.</b> <span class="muted">Need a late checkout? Contact us in advance.</span></p>
+      <h3>Cleaning</h3>
+      <ul><li>Twice a week for stays longer than 3 nights, between 10:00 and noon.</li><li>Want fresh sheets and towels? Leave them on the floor to signal.</li></ul>
+    </div>
+  </details>
+  <details>
+    <summary>🧃 Mini-bar</summary>
+    <div class="body">
+      <p>Make the most of your vacation — feel free to use it! At the end of your stay, please <b>refill</b> it or <b>leave money</b> to cover restocking.</p>
+      <table>
+        <tr><th>Item</th><th>Price (unit)</th><th>Available</th></tr>
+        <tr><td>Water 1.5 L</td><td>200 CVE / €2</td><td>3</td></tr>
+        <tr><td>Water 5 L</td><td>400 CVE / €4</td><td>1</td></tr>
+        <tr><td>Beer</td><td>200 CVE / €2</td><td>6</td></tr>
+        <tr><td>Soda</td><td>200 CVE / €2</td><td>3</td></tr>
+        <tr><td>Juice</td><td>200 CVE / €2</td><td>3</td></tr>
+        <tr><td>Wine</td><td>1,500 CVE / €15</td><td>2</td></tr>
+      </table>
+    </div>
+  </details>
+  <details>
+    <summary>⛱️ Pool, paddle court & common area</summary>
+    <div class="body">
+      <ul>
+        <li>The condominium has a common area with a swimming pool — enjoy it!</li>
+        <li>Stay connected while swimming 😎 — WiFi: <b>Encosta Azul Starlink</b> / <b>Cabo.Verde@2025</b></li>
+        <li>Paddle court: <b>2,000 CVE / €20 per hour</b> (rackets and balls included).</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>👕 Laundry · 🥩 Barbecue · 🚮 Trash</summary>
+    <div class="body">
+      <h3>Laundry</h3>
+      <ul><li>Hand your clothes in a bag to Sonia in the morning.</li><li>Machine-washed, sun-dried, returned at the end of the day.</li></ul>
+      <h3>Barbecue</h3>
+      <p>In front of the house on the right, below the big tree. <span class="muted"><i>Need accessories? Feel free.</i></span></p>
+      <h3>Trash</h3>
+      <ul><li>Don't leave trash in the patio area — dogs can get to it.</li><li>Put it in the container in front of the field, outside.</li></ul>
+      <p class="muted"><i>Also keep important belongings out of the animals' reach — they can mistake them for toys.</i></p>
+    </div>
+  </details>
+  <details>
+    <summary>🏘️ The Encosta Azul Condominium</summary>
+    <div class="body">
+      <ul>
+        <li>A quiet, friendly, and safe community — some families live here permanently, a few houses are holiday rentals (like Aloe Vera).</li>
+        <li><b>Sónia</b> is on-site every morning <b>8:00–13:00</b> for questions and support. Outside that, message us anytime.</li>
+        <li>We (Sofia, Ivan and Malik) are usually here on weekends — say hello! <b>Snoopy</b>, our brown dog, is very friendly and great with children.</li>
+        <li><b>Jorge & Arlinda</b> (Sofia's father) live in the condominium and run the <b>Encosta Azul Aparthotel</b> at the entrance. You can book breakfast or dinner with them — Arlinda cooks amazing homemade meals <span class="muted">(no dinner service in January and February)</span>.</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<section id="guides-en">
+  <h2>👋 Tour Guides</h2>
+  <details>
+    <summary>👋 Guides for tours & visits — Santiago Island</summary>
+    <div class="body">
+      <p>We recommend these guides for tours around Santiago Island — they have special tips and can surprise you with spectacular places. All speak English or French.</p>
+      <div class="contact"><div class="who"><b>Kuka</b><span>Praia · By far the most recommended — perfect English, own car, exceptional personalized tours · IG @kebrakanelabeach</span></div><a class="btn wa" href="https://wa.me/2389284287">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Silvio</b><span>Praia · “Discover Santiago Island” on Facebook & Instagram</span></div><a class="btn wa" href="https://wa.me/2389162269">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Tuga Barros</b><span>Praia · IG tugabarros75</span></div><a class="btn wa" href="https://wa.me/2389847737">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Beny</b><span>Cidade Velha</span></div><a class="btn wa" href="https://wa.me/2389156427">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Manecas</b><span>Tarrafal</span></div><a class="btn wa" href="https://wa.me/2389379666">WhatsApp</a></div>
+    </div>
+  </details>
+</section>
+
+<section id="money-en">
+  <h2>💶 Money & SIM</h2>
+  <details>
+    <summary>💲 Money & payments</summary>
+    <div class="body">
+      <p>The Cape Verdean Escudo (CVE) has a <b>fixed exchange rate</b>: 1 EUR = 110.265 CVE <span class="muted">(many places round to 1 EUR = 100 CVE)</span>.</p>
+      <ul>
+        <li>Exchange money at the airport desk or local banks (fees usually €3–5).</li>
+        <li>ATMs everywhere on the island (fees depend on your bank).</li>
+        <li>Most restaurants, cafés and shops accept international cards (VISA, Mastercard, Revolut, etc.).</li>
+        <li>You can often pay in euros (1 EUR ≈ 100 CVE); change is given in CVE.</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>☎️ SIM card</summary>
+    <div class="body">
+      <p>At the airport, after baggage claim, <b>Alou</b> and <b>Unitel</b> staff offer free SIM cards (both work well). Data packages cost around €10 with many GBs — internet in Cabo Verde is well-priced and works very well. It can be a great help for finding places and staying in touch.</p>
+    </div>
+  </details>
+</section>
+
+<section id="explore-en">
+  <h2>🗺️ Explore</h2>
+  <details>
+    <summary>🏛️ Cidade Velha — UNESCO World Heritage</summary>
+    <div class="body">
+      <div class="tip">👉 We recommend visiting <a href="http://www.visitcidadevelha.cv/">visitcidadevelha.cv</a></div>
+      <h3>Where to eat</h3>
+      <ul>
+        <li><b>Hotel Vulcão</b> — Sundays: live music & self-service, loved by families from Fogo Island. Highly recommended. <a href="https://maps.app.goo.gl/94zcc3xLYA9bSeKJA">Map</a> · <a href="https://www.hotelvulcao.cv/">Site</a></li>
+        <li><b>Restaurante Old City</b> — in the center facing the sea; fresh fish, pizza, carpaccio, garlic bread. <a href="https://maps.app.goo.gl/rRmmbkdxCZQN2oFu7">Map</a></li>
+        <li><b>Restaurante Batuku</b> — on Banana Street, surrounded by greenery; wonderful food <i>(price a bit above average)</i>. <a href="https://maps.app.goo.gl/r3LYkUrmcAb5Cy397">Map</a></li>
+        <li><b>Doce Local de Coco</b> — next to Pelourinho square, Dona Fulu sells the best coconut candy in the world. Don't miss it :)</li>
+      </ul>
+      <h3>Where to shop</h3>
+      <ul>
+        <li><b>Mini Mercado Vlá</b> — near the Sé Catedral; the best in town. <a href="https://maps.app.goo.gl/krpnybfXevBUvLn67">Map</a></li>
+        <li><b>Mini Mercado Neti</b> — center of the village, on the main street. <a href="https://maps.app.goo.gl/sEpwbpomsq1Q3MqFA">Map</a></li>
+      </ul>
+      <h3>Beaches</h3>
+      <ul>
+        <li><b>Praia do Caniço</b> — ~1 km past Hotel Vulcão on the main road; great for swimming. <a href="https://maps.app.goo.gl/aivA3QyuhsCDMhrc8">Map</a></li>
+        <li><b>Praia do Portinho</b> — in the old town center; stand-up paddle rentals on weekends. <a href="https://maps.app.goo.gl/TVrbcABu8gz9UBEk8">Map</a></li>
+      </ul>
+      <h3>Handicrafts</h3>
+      <ul>
+        <li><b>Centro Cultural da Cidade Velha</b> — 100% national handicrafts.</li>
+        <li><b>Praça do Pelourinho</b> — national and African crafts, souvenirs.</li>
+      </ul>
+      <h3>Monuments</h3>
+      <p class="muted">A UNESCO World Heritage Site since 2009 — the first European colonial settlement in the tropics. Most monuments close at 5 PM.</p>
+      <ul>
+        <li><b>Pelourinho</b> — the pillory in the city square.</li>
+        <li><b>Fortaleza Real de São Filipe</b> — panoramic views over Cidade Velha.</li>
+        <li><b>Sé Catedral</b> — ruins of the first cathedral in sub-Saharan Africa.</li>
+        <li><b>Convento de São Francisco</b> — historic convent.</li>
+        <li><b>Igreja de Nossa Senhora do Rosário</b> — the oldest colonial church in the tropics (15th century).</li>
+        <li><b>Rua Banana</b> — one of the oldest streets in sub-Saharan Africa.</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>🌆 Praia City</summary>
+    <div class="body">
+      <p class="muted">Praia is a large city of 125,000 inhabitants with markets, restaurants and nightlife. For more details, ask Sofia.</p>
+      <h3>Where to eat</h3>
+      <ul>
+        <li><b>Kaza Katxupa</b> — the only fully Cape Verdean restaurant, from food to decor; try katxupa fresh or sautéed. Rua Pedonal, Plateau. <a href="https://maps.app.goo.gl/GQi7z8HkUuDTKBnSA">Map</a> · <a href="https://www.tripadvisor.com.br/Restaurant_Review-g293775-d15361388-Reviews-Kaza_Katxupa-Praia_Santiago.html">TripAdvisor</a></li>
+        <li><b>Café Sofia</b> — 30+ years of history, in the heart of the Plateau; a favorite of locals and tourists, <b>live music every night</b> 🎵. <a href="https://maps.app.goo.gl/Ao2KSHYWav5kV5No9">Map</a> · <a href="https://www.facebook.com/cafesofia.restaurante/">Facebook</a></li>
+        <li><b>Titi Sushi Lounge</b> — sushi with the best tuna in the world, from Cape Verde. Ondas do Mar Condominium. <a href="https://www.tripadvisor.com.br/Restaurant_Review-g293775-d4004761-Reviews-Titi_Sushi_Lounge-Praia_Santiago.html">TripAdvisor</a></li>
+      </ul>
+      <h3>Kebra Kanela area <a class="muted" href="https://maps.app.goo.gl/AgTVpta9wXLSPjxWA">(map)</a></h3>
+      <ul>
+        <li><b>Roma</b> — Italian, overlooking Kebra Kanela beach.</li>
+        <li><b>Orla</b> — local & international; live music Fridays and Saturdays.</li>
+        <li><b>Seven</b> — modern spot; Batuque dance (traditional from Santiago) on Thursdays.</li>
+        <li><b>Shopping Praia</b> — fast food stalls and a very nice bakery for an excellent sunset.</li>
+      </ul>
+      <h3>Prainha area</h3>
+      <ul><li><b>Linha de Água</b> — seaside restaurant with a stunning view; beach beds for resting. <a href="https://maps.app.goo.gl/rxzZT9A6ZdPXwrRE9">Map</a></li></ul>
+      <h3>Where to shop</h3>
+      <ul>
+        <li><b>Mercado Plateau</b> — vegetables, fruits, fish. <a href="https://maps.app.goo.gl/NyXJtpcZPYaJG24s5">Map</a></li>
+        <li><b>Matilde</b> — everything at a good price (Achada Santo António & Palmarejo). <a href="https://maps.app.goo.gl/A4j3PvZcVmpxc37H8">Map</a></li>
+        <li><b>Meu Super</b> — higher quality, Portuguese Continente products. <a href="https://maps.app.goo.gl/pcpkv3ouXRaw7Qg38">Map</a></li>
+        <li><b>Boutique dos Congelados</b> — meats and imported fish like salmon. <a href="https://maps.app.goo.gl/eYDiaMABQ2Cxaazd8">Map</a></li>
+        <li><b>Padaria Pão Quente</b> — bakeries all over Praia. <a href="https://maps.app.goo.gl/sGCyA52H82fV8bqe7">Map</a></li>
+      </ul>
+      <h3>Beaches</h3>
+      <ul>
+        <li><b>Kebra Kanela</b> — one of the most sought-after beaches in Praia. <a href="https://maps.app.goo.gl/fpGvtNFyv4oEEmqr9">Map</a></li>
+        <li><b>Prainha</b> — excellent restaurant and nice beach chairs for rent. <a href="https://maps.app.goo.gl/G3gt6bFuttVpp6Xy7">Map</a></li>
+      </ul>
+      <h3>Markets</h3>
+      <ul>
+        <li><b>Sucupira</b> — a huge typical African market: crafts, clothes, food, spices, medicinal herbs. <a href="https://maps.app.goo.gl/bmefEQ9X88YRFpGK8">Map</a></li>
+        <li><b>Mercado do Plateau</b> — vibrant smells and flavors; very homemade food. <a href="https://maps.app.goo.gl/dzfKchRcL9kWVYNU8">Map</a></li>
+      </ul>
+      <h3>Museums & art</h3>
+      <ul>
+        <li><b>Museu Amílcar Cabral</b> — dedicated to the freedom fighter Amílcar Cabral (1924–73). <a href="https://maps.app.goo.gl/Mi3BHHrA6CDxnLfh9">Map</a></li>
+        <li><b>Rua D'Arte</b> — a street of murals; the vibe competes with hipster spots in Berlin. <a href="https://maps.app.goo.gl/BYfsWnwKWLspsTaW8">Map</a></li>
+        <li><b>Pinturas Achada Grande</b> — works by 35 national and 7 international artists transforming the neighborhood. <i>Note: an area with some social problems — don't venture too far.</i> <a href="https://maps.app.goo.gl/FcGavhAhD7Lry2dVA">Map</a> · <a href="https://www.agendacultural.cv/index.php?paginas=54&id_cod=126">Info</a></li>
+      </ul>
+      <h3>Let's dance?</h3>
+      <ul><li><b>Bar Alkimist</b> — every night from 11 pm. <a href="https://maps.app.goo.gl/Tc6qiUjsEFWggNVp8">Map</a></li></ul>
+    </div>
+  </details>
+  <details>
+    <summary>⛰️ Santiago Island</summary>
+    <div class="body">
+      <h3>Beaches</h3>
+      <ul>
+        <li><b>São Francisco</b> — beautiful beach 15 km from Praia; no restaurants. Turtles nest here in summer. <a href="https://maps.app.goo.gl/bRVzmjNFKi4CWywE6">Map</a></li>
+        <li><b>Praia Baixo</b> — pleasant beach 20 km from Praia; excellent restaurant Big Lanche. <a href="https://maps.app.goo.gl/GbVcAZB9aqrvYQP18">Map</a></li>
+        <li><b>Portinho</b> — sheltered, crystal-clear water, white sand. Very isolated — bring supplies and be careful. <a href="https://maps.app.goo.gl/2BZDwjXnr7CMuiGu5">Map</a></li>
+        <li><b>Ribeira da Prata</b> — tranquil, lesser-known; calm waters, shade, great for picnics. <a href="https://maps.app.goo.gl/Loq6P6wRqJu7r3ZC9">Map</a></li>
+        <li><b>Porto da Ribeira da Barca</b> — authentic fishing village with a beautiful cove, great for a boat ride. <a href="https://maps.app.goo.gl/zpp7r7UmyoKo4jrW9">Map</a></li>
+        <li><b>Tarrafal</b> — famous white-sand beach and crystal-clear water. We have an Airbnb here — and highly recommend Alto Mira Restaurant. <a href="https://maps.app.goo.gl/iMS4tyGwTVFHJULXA">Map</a></li>
+      </ul>
+      <h3>Other places</h3>
+      <ul>
+        <li><b>Cidade Velha</b> — UNESCO heritage town, 10 km from Praia. <a href="https://maps.app.goo.gl/iqN4Db8VtJ1LA7h1A">Map</a></li>
+        <li><b>São Domingos</b> — small inland town; try the corn pastry! <a href="https://maps.app.goo.gl/nFTDawMpePdEqYMq8">Map</a></li>
+        <li><b>Rui Vaz</b> — mountain landscapes, cozy lodges, hiking trails, great viewpoint. <a href="https://maps.app.goo.gl/MrAM3hXVMCP2aE1Z6">Map</a></li>
+        <li><b>São Jorge</b> — picturesque, historic church and picnic areas. <a href="https://maps.app.goo.gl/mNgQeWTS6KsQqMG38">Map</a></li>
+        <li><b>Assomada</b> — bustling market town; visit the market. <a href="https://maps.app.goo.gl/MBFRPsg2FXZzPHaR9">Map</a></li>
+        <li><b>Poilão</b> — the oldest tree in Cape Verde, in a small nature reserve. <a href="https://maps.app.goo.gl/LmqfJPny3vJjQZ3V6">Map</a></li>
+        <li><b>Serra Malagueta</b> — natural park with marked trails and spectacular views. <a href="https://maps.app.goo.gl/9oDjrLYLunN9WAvUA">Map</a></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>🛥️ Visiting other islands</summary>
+    <div class="body">
+      <ul>
+        <li><b>By boat:</b> Fogo and Maio — tickets at <a href="https://www.cvinterilhas.cv/buy">CV Interilhas</a></li>
+        <li><b>By plane:</b> all other islands — tickets at <a href="https://www.caboverdeairlines.com/">Cabo Verde Airlines</a></li>
+        <li><b>Mountain tourism:</b> Santo Antão, Fogo, São Nicolau</li>
+        <li><b>Beach tourism:</b> Sal, Boavista, Maio</li>
+      </ul>
+      <p class="muted"><i>We have recommendations for where to stay and what to do on all the islands — talk to us!</i></p>
+    </div>
+  </details>
+</section>
+
+<footer>
+  <p>🌵 Casa Aloé Vera · Encosta Azul, Cidade Velha, Cabo Verde</p>
+  <p>Made with <span class="heart">♥</span> by Sofia & family — we wish you a wonderful stay!</p>
+</footer>
+</div>
+</div>
+
+<!-- ============ PORTUGUÊS ============ -->
+<div class="lang-block" data-lang="pt" lang="pt" hidden>
+<header>
+  <div class="lang-top"><button class="active" onclick="setLang('pt')">PT</button><button onclick="setLang('en')">EN</button><button onclick="setLang('fr')">FR</button></div>
+  <div class="emoji">🌵</div>
+  <h1>Casa Aloé Vera</h1>
+  <p>Guia do Hóspede · Encosta Azul, Cidade Velha · Cabo Verde</p>
+  <div class="hero-btns">
+    <a class="hero-btn" href="https://www.cidadevelha.org">🏠 Início · cidadevelha.org</a>
+    <a class="hero-btn wa" href="https://wa.me/2389813071">💬 Fale com a Sofia no WhatsApp</a>
+  </div>
+</header>
+
+<nav><div class="inner">
+  <a href="#wifi-pt">📶 WiFi</a>
+  <a href="#contacts-pt">☎️ Contactos</a>
+  <a href="#arrival-pt">📍 Chegada</a>
+  <a href="#transport-pt">🚕 Transporte</a>
+  <a href="#stay-pt">🏡 A sua Estadia</a>
+  <a href="#guides-pt">👋 Guias</a>
+  <a href="#money-pt">💶 Dinheiro & SIM</a>
+  <a href="#explore-pt">🗺️ Explorar</a>
+</div></nav>
+
+<div class="wrap">
+
+<section id="wifi-pt">
+  <h2>📶 WiFi Grátis</h2>
+  <div class="card wifi">
+    <div class="wifi-row"><div><span class="muted">Rede</span><br><b>NETSOFIA</b></div><button class="copy" data-copy="NETSOFIA">Copiar</button></div>
+    <div class="wifi-row"><div><span class="muted">Palavra-passe</span><br><b>ABOEHBAKAM</b></div><button class="copy" data-copy="ABOEHBAKAM">Copiar</button></div>
+    <div class="wifi-row"><div><span class="muted">Zona da piscina · Encosta Azul Starlink</span><br><b>Cabo.Verde@2025</b></div><button class="copy" data-copy="Cabo.Verde@2025">Copiar</button></div>
+  </div>
+</section>
+
+<section id="contacts-pt">
+  <h2>☎️ Estamos aqui para ajudar</h2>
+  <div class="card">
+    <div class="contact"><div class="who"><b>Sofia</b><span>A sua anfitriã</span></div><div class="btns"><a class="btn wa" href="https://wa.me/2389813071">WhatsApp</a><a class="btn tel" href="tel:+2389813071">Ligar</a></div></div>
+    <div class="contact"><div class="who"><b>Sonia</b><span>Apoio, limpeza e pequeno-almoço</span></div><div class="btns"><a class="btn wa" href="https://wa.me/2389354301">WhatsApp</a><a class="btn tel" href="tel:+2389354301">Ligar</a></div></div>
+    <div class="contact"><div class="who"><b>Jorge</b><span>Pai da Sofia</span></div><div class="btns"><a class="btn wa" href="https://wa.me/2389912103">WhatsApp</a><a class="btn tel" href="tel:+2389912103">Ligar</a></div></div>
+    <div class="contact"><div class="who"><b>Kenedy</b><span>Táxi – Praia</span></div><div class="btns"><a class="btn wa" href="https://wa.me/2389230569">WhatsApp</a><a class="btn tel" href="tel:+2389230569">Ligar</a></div></div>
+    <div class="contact"><div class="who"><b>Kenedy</b><span>Táxi – Cidade Velha (mesmo nome, pessoa diferente 😄)</span></div><div class="btns"><a class="btn wa" href="https://wa.me/2389128261">WhatsApp</a><a class="btn tel" href="tel:+2389128261">Ligar</a></div></div>
+  </div>
+  <div class="card emergency">
+    <h3 style="margin-top:0">🆘 Emergência</h3>
+    <div class="contact"><div class="who"><b>Polícia</b></div><a class="btn tel num" href="tel:132">132</a></div>
+    <div class="contact"><div class="who"><b>Ambulância</b></div><a class="btn tel num" href="tel:123">123</a></div>
+    <div class="contact"><div class="who"><b>Posto de Saúde da Cidade Velha</b></div><a class="btn tel" href="tel:+2389864979">+238 986 49 79</a></div>
+  </div>
+</section>
+
+<section id="arrival-pt">
+  <h2>📍 Localização & Chegada</h2>
+  <div class="card">
+    <p><b>Google Maps:</b> pesquise por <b>“Encosta Azul, Cidade Velha”</b></p>
+    <p style="margin-top:8px"><a class="btn map" href="https://www.google.com/maps/search/Encosta+Azul,+Cidade+Velha">Abrir no Google Maps</a></p>
+    <h3>🚪 Portão – Ladeira do Salineiro</h3>
+    <ul>
+      <li>O portão do condomínio fica na estrada da ladeira do Salineiro, do <b>lado esquerdo</b>.</li>
+      <li>O portão é manual — basta deslizá-lo/empurrá-lo para o lado.</li>
+      <li>Feche-o sempre bem, por segurança e para evitar que animais entrem no condomínio.</li>
+      <li>De táxi? Diga ao motorista: <b>“Ladeira do Salineiro — portão à esquerda.”</b></li>
+      <li>Ambos os motoristas Kenedy conhecem a localização exata.</li>
+    </ul>
+    <h3>🧭 Como encontrar a casa</h3>
+    <figure><img class="photo" src="https://drive.google.com/thumbnail?id=1Hhh3uxpdJX5z0anotUgDIKUfBeTs-GpN&sz=w1200" alt="Mapa guiado — como chegar à casa" loading="lazy"><figcaption>Mapa guiado — como chegar à casa</figcaption></figure>
+    <figure><img class="photo" src="https://drive.google.com/thumbnail?id=135wHvFU6SMB3Oc8-qH99j9giSFisE-R3&sz=w1200" alt="Frente da casa" loading="lazy"><figcaption>Frente da casa — compare antes de entrar</figcaption></figure>
+    <div class="note">⚠️ A casa fica num <b>condomínio privado</b> com várias casas de pedra parecidas. Compare com a foto para ter a certeza de que está na casa certa — e mande mensagem se tiver dúvidas, é perfeitamente normal confundir-se à primeira!</div>
+    <ul>
+      <li>Em Cabo Verde as ruas raramente têm nomes ou placas visíveis.</li>
+      <li>Um táxi normal vindo da Praia pode não conhecer este condomínio.</li>
+      <li>Para evitar problemas: use o endereço do Google Maps, mencione a <b>ladeira do Salineiro</b> e, sempre que possível, use um dos motoristas Kenedy.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="transport-pt">
+  <h2>🚕 Como se deslocar</h2>
+  <details>
+    <summary>🚐 Yace / “Colectivo” — transporte público local</summary>
+    <div class="body">
+      <p>Uma carrinha Toyota Hiace — muito económica e muito usada pela população local.</p>
+      <h3>Como apanhar o Yace a partir da casa</h3>
+      <ul><li>Suba até à estrada principal e fique na esquina da rua.</li><li>Levante a mão quando passar um Yace — param sempre.</li></ul>
+      <h3>Preços aproximados</h3>
+      <div class="price-line"><span>Casa → Centro da Cidade Velha</span><b>50 CVE / €0,50</b></div>
+      <div class="price-line"><span>Cidade Velha → Praia (Sucupira)</span><b>100 CVE / €1</b></div>
+      <div class="price-line"><span>Praia → Tarrafal (só a partir da Praia)</span><b>1.000 CVE / €10</b></div>
+      <h3>Para voltar à Cidade Velha — apanhe em</h3>
+      <ul><li>Mercado de Sucupira</li><li>Rotunda de Terra Branca</li><li>Rotunda de Palmarejo (Braz)</li></ul>
+      <p class="muted">Sem horário fixo — parte quando está cheio. Mais frequente nos dias úteis, até às 18h.</p>
+    </div>
+  </details>
+  <details>
+    <summary>🚖 Táxi — os dois Kenedys</summary>
+    <div class="body">
+      <div class="contact"><div class="who"><b>Kenedy – Praia</b></div><a class="btn wa" href="https://wa.me/2389230569">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Kenedy – Cidade Velha</b></div><a class="btn wa" href="https://wa.me/2389128261">WhatsApp</a></div>
+      <ul><li>De confiança, conhecem o condomínio e o caminho exato até à casa.</li><li>Disponíveis dia e noite. Sem confusões com localização ou preços.</li></ul>
+      <h3>Preços médios</h3>
+      <div class="price-line"><span>Casa → Centro da Cidade Velha</span><b>300 CVE / €3</b></div>
+      <div class="price-line"><span>Praia → qualquer bairro</span><b>150–300 CVE / €1,5–3</b></div>
+      <div class="price-line"><span>Aeroporto → Praia</span><b>1.000–2.000 CVE / €10–20</b></div>
+      <div class="price-line"><span>Aeroporto → Cidade Velha</span><b>2.500 (dia) / 3.000 CVE (noite)</b></div>
+      <div class="price-line"><span>Aeroporto → Tarrafal</span><b>6.000 (dia) / 8.000 CVE (noite)</b></div>
+      <div class="note">⚠️ Os táxis do aeroporto costumam cobrar mais — <b>negocie sempre antes!</b> Sempre que possível, ligue a um dos Kenedys.</div>
+    </div>
+  </details>
+  <details>
+    <summary>🚗 Aluguer de carro — muito recomendado</summary>
+    <div class="body">
+      <p>Conduzir em Cabo Verde é fácil e seguro, e ter carro dá-lhe liberdade para explorar a ilha. A partir de <b>€50/dia</b>.</p>
+      <h3>Contactos recomendados (WhatsApp)</h3>
+      <div class="contact"><div class="who"><b>Mario Amaro</b><span>De longe o mais recomendado — só tem 2 carros</span></div><a class="btn wa" href="https://wa.me/2389530000">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Cipriano</b></div><a class="btn wa" href="https://wa.me/2389918902">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Kenedy – Praia</b><span>Também aluga carros</span></div><a class="btn wa" href="https://wa.me/2389230569">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Miguel</b></div><a class="btn wa" href="https://wa.me/2385958876">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Hertz</b></div><a class="btn wa" href="https://wa.me/2389917907">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Fernando</b></div><a class="btn wa" href="https://wa.me/2389941393">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Marlon</b></div><a class="btn wa" href="https://wa.me/2389703359">WhatsApp</a></div>
+      <p class="muted">Pesquise também por conta própria — hoje em dia há muitas opções.</p>
+    </div>
+  </details>
+</section>
+
+<section id="stay-pt">
+  <h2>🏡 A sua Estadia</h2>
+  <details open>
+    <summary>🥖 Pequeno-almoço</summary>
+    <div class="body">
+      <ul>
+        <li>Servido de <b>segunda a sábado, 8:15–10:00</b>, na varanda.</li>
+        <li>Geralmente: café e/ou chá, pão, ovos, fruta, iogurte e sumo.</li>
+        <li>Diga-nos se prefere café ou chá, e como gosta dos ovos.</li>
+        <li>Deixe a louça lá fora para que possamos recolhê-la.</li>
+      </ul>
+      <h3>Domingos e feriados — cesta de pequeno-almoço</h3>
+      <ul><li>Na véspera à noite, deixamos um tabuleiro com os itens do pequeno-almoço.</li><li>Os produtos refrigerados ficam no frigorífico; o pão fica no congelador.</li></ul>
+      <div class="tip">💡 <b>Dica:</b> tire o pão do congelador 10 minutos antes de comer — estará fresco. É o método que usamos diariamente, já que a Cidade Velha não tem padaria.</div>
+      <div class="note">🐶 Atenção aos cães e gatos — costumam roubar comida. Não os alimente à mesa para não criarem o hábito.</div>
+      <p class="muted"><i>Tem restrições ou preferências alimentares? Diga-nos.</i></p>
+    </div>
+  </details>
+  <details>
+    <summary>💧 Água & duche</summary>
+    <div class="body">
+      <ul><li>Há água quente <b>apenas no duche</b>.</li><li>Uma bomba elétrica garante boa pressão — se sentir a pressão baixa, avise-nos e resolvemos de imediato.</li></ul>
+      <p class="muted"><i>Por favor, tome duches rápidos — a água é um recurso escasso em Cabo Verde. 🙏</i></p>
+    </div>
+  </details>
+  <details>
+    <summary>🖐️ Checkout & limpeza</summary>
+    <div class="body">
+      <p><b>O checkout é às 11:00.</b> <span class="muted">Precisa de checkout tardio? Contacte-nos com antecedência.</span></p>
+      <h3>Limpeza</h3>
+      <ul><li>Duas vezes por semana em estadias com mais de 3 noites, entre as 10:00 e o meio-dia.</li><li>Quer lençóis e toalhas lavados? Deixe-os no chão para sinalizar.</li></ul>
+    </div>
+  </details>
+  <details>
+    <summary>🧃 Mini-bar</summary>
+    <div class="body">
+      <p>Aproveite as férias — use à vontade! No final da estadia, por favor <b>reponha</b> o mini-bar ou <b>deixe dinheiro</b> para cobrir a reposição.</p>
+      <table>
+        <tr><th>Item</th><th>Preço (unid.)</th><th>Disponível</th></tr>
+        <tr><td>Água 1,5 L</td><td>200 CVE / €2</td><td>3</td></tr>
+        <tr><td>Água 5 L</td><td>400 CVE / €4</td><td>1</td></tr>
+        <tr><td>Cerveja</td><td>200 CVE / €2</td><td>6</td></tr>
+        <tr><td>Refrigerante</td><td>200 CVE / €2</td><td>3</td></tr>
+        <tr><td>Sumo</td><td>200 CVE / €2</td><td>3</td></tr>
+        <tr><td>Vinho</td><td>1.500 CVE / €15</td><td>2</td></tr>
+      </table>
+    </div>
+  </details>
+  <details>
+    <summary>⛱️ Piscina, campo de padel & área comum</summary>
+    <div class="body">
+      <ul>
+        <li>O condomínio tem uma área comum com piscina — aproveite!</li>
+        <li>Fique ligado enquanto nada 😎 — WiFi: <b>Encosta Azul Starlink</b> / <b>Cabo.Verde@2025</b></li>
+        <li>Campo de padel: <b>2.000 CVE / €20 por hora</b> (raquetes e bolas incluídas).</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>👕 Lavandaria · 🥩 Churrasco · 🚮 Lixo</summary>
+    <div class="body">
+      <h3>Lavandaria</h3>
+      <ul><li>Entregue a roupa num saco à Sonia, de manhã.</li><li>Lavada à máquina, seca ao sol e devolvida ao fim do dia.</li></ul>
+      <h3>Churrasco</h3>
+      <p>Em frente à casa, à direita, debaixo da árvore grande. <span class="muted"><i>Precisa de acessórios? Fique à vontade.</i></span></p>
+      <h3>Lixo</h3>
+      <ul><li>Não deixe o lixo no pátio — os cães podem apanhá-lo.</li><li>Coloque-o no contentor em frente ao campo, do lado de fora.</li></ul>
+      <p class="muted"><i>Evite também deixar pertences importantes ao alcance dos animais — podem confundi-los com brinquedos.</i></p>
+    </div>
+  </details>
+  <details>
+    <summary>🏘️ O Condomínio Encosta Azul</summary>
+    <div class="body">
+      <ul>
+        <li>Uma comunidade tranquila, simpática e segura — algumas famílias vivem cá permanentemente, algumas casas são de férias (como a Aloé Vera).</li>
+        <li>A <b>Sónia</b> está no local todas as manhãs, das <b>8:00 às 13:00</b>, para dúvidas e apoio. Fora desse horário, mande-nos mensagem.</li>
+        <li>Nós (Sofia, Ivan e Malik) costumamos cá estar aos fins de semana — diga olá! O <b>Snoopy</b>, o nosso cão castanho, é muito meigo e ótimo com crianças.</li>
+        <li>O <b>Jorge & a Arlinda</b> (pai da Sofia) vivem no condomínio e gerem o <b>Aparthotel Encosta Azul</b> à entrada. Pode reservar pequeno-almoço ou jantar com eles — a Arlinda cozinha refeições caseiras maravilhosas <span class="muted">(sem serviço de jantar em janeiro e fevereiro)</span>.</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<section id="guides-pt">
+  <h2>👋 Guias Turísticos</h2>
+  <details>
+    <summary>👋 Guias para passeios e visitas — Ilha de Santiago</summary>
+    <div class="body">
+      <p>Recomendamos estes guias para passeios pela Ilha de Santiago — têm dicas especiais e podem surpreendê-lo com lugares espetaculares. Todos falam inglês ou francês.</p>
+      <div class="contact"><div class="who"><b>Kuka</b><span>Praia · De longe o mais recomendado — inglês perfeito, carro próprio, passeios excecionais e personalizados · IG @kebrakanelabeach</span></div><a class="btn wa" href="https://wa.me/2389284287">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Silvio</b><span>Praia · “Discover Santiago Island” no Facebook e Instagram</span></div><a class="btn wa" href="https://wa.me/2389162269">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Tuga Barros</b><span>Praia · IG tugabarros75</span></div><a class="btn wa" href="https://wa.me/2389847737">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Beny</b><span>Cidade Velha</span></div><a class="btn wa" href="https://wa.me/2389156427">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Manecas</b><span>Tarrafal</span></div><a class="btn wa" href="https://wa.me/2389379666">WhatsApp</a></div>
+    </div>
+  </details>
+</section>
+
+<section id="money-pt">
+  <h2>💶 Dinheiro & SIM</h2>
+  <details>
+    <summary>💲 Dinheiro & pagamentos</summary>
+    <div class="body">
+      <p>O Escudo cabo-verdiano (CVE) tem <b>câmbio fixo</b>: 1 EUR = 110,265 CVE <span class="muted">(muitos lugares arredondam para 1 EUR = 100 CVE)</span>.</p>
+      <ul>
+        <li>Troque dinheiro no balcão do aeroporto ou em bancos locais (taxas de €3–5).</li>
+        <li>Há multibancos por toda a ilha (taxas dependem do seu banco).</li>
+        <li>A maioria dos restaurantes, cafés e lojas aceita cartões internacionais (VISA, Mastercard, Revolut, etc.).</li>
+        <li>Em muitos lugares pode pagar em euros (1 EUR ≈ 100 CVE); o troco é dado em CVE.</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>☎️ Cartão SIM</summary>
+    <div class="body">
+      <p>No aeroporto, depois de levantar a bagagem, há pessoas da <b>Alou</b> e da <b>Unitel</b> a oferecer cartões SIM grátis (ambas funcionam bem). Os pacotes de dados custam cerca de €10 com muitos GBs — a internet em Cabo Verde tem bom preço e funciona muito bem. É uma grande ajuda para encontrar lugares e manter o contacto.</p>
+    </div>
+  </details>
+</section>
+
+<section id="explore-pt">
+  <h2>🗺️ Explorar</h2>
+  <details>
+    <summary>🏛️ Cidade Velha — Património Mundial UNESCO</summary>
+    <div class="body">
+      <div class="tip">👉 Recomendamos visitar <a href="http://www.visitcidadevelha.cv/">visitcidadevelha.cv</a></div>
+      <h3>Onde comer</h3>
+      <ul>
+        <li><b>Hotel Vulcão</b> — aos domingos há música ao vivo e self-service, frequentado por gente da ilha do Fogo que vive na capital. Muito recomendado. <a href="https://maps.app.goo.gl/94zcc3xLYA9bSeKJA">Mapa</a> · <a href="https://www.hotelvulcao.cv/">Site</a></li>
+        <li><b>Restaurante Old City</b> — no centro, de frente para o mar; peixe fresco, pizza, carpaccio e pão de alho. <a href="https://maps.app.goo.gl/rRmmbkdxCZQN2oFu7">Mapa</a></li>
+        <li><b>Restaurante Batuku</b> — na Rua Banana, rodeado de verde; comida maravilhosa <i>(preço um pouco acima da média)</i>. <a href="https://maps.app.goo.gl/r3LYkUrmcAb5Cy397">Mapa</a></li>
+        <li><b>Doce Local de Coco</b> — junto à praça do Pelourinho, a Dona Fulu vende o melhor doce de coco do mundo. Não perca :)</li>
+      </ul>
+      <h3>Onde comprar</h3>
+      <ul>
+        <li><b>Mini Mercado Vlá</b> — perto da Sé Catedral; o melhor da vila. <a href="https://maps.app.goo.gl/krpnybfXevBUvLn67">Mapa</a></li>
+        <li><b>Mini Mercado Neti</b> — bem no centro da vila, na rua principal. <a href="https://maps.app.goo.gl/sEpwbpomsq1Q3MqFA">Mapa</a></li>
+      </ul>
+      <h3>Praias</h3>
+      <ul>
+        <li><b>Praia do Caniço</b> — ~1 km depois do Hotel Vulcão, pela estrada principal; ótima para nadar. <a href="https://maps.app.goo.gl/aivA3QyuhsCDMhrc8">Mapa</a></li>
+        <li><b>Praia do Portinho</b> — no centro da vila antiga; ao fim de semana alugam pranchas de stand-up paddle. <a href="https://maps.app.goo.gl/TVrbcABu8gz9UBEk8">Mapa</a></li>
+      </ul>
+      <h3>Artesanato</h3>
+      <ul>
+        <li><b>Centro Cultural da Cidade Velha</b> — artesanato 100% nacional.</li>
+        <li><b>Praça do Pelourinho</b> — um pouco de tudo: artesanato nacional, africano e souvenirs.</li>
+      </ul>
+      <h3>Monumentos</h3>
+      <p class="muted">Património Mundial da UNESCO desde 2009 — o primeiro povoado colonial europeu nos trópicos. A maioria dos monumentos fecha às 17h.</p>
+      <ul>
+        <li><b>Pelourinho</b> — o pelourinho na praça da vila.</li>
+        <li><b>Fortaleza Real de São Filipe</b> — vistas panorâmicas sobre a Cidade Velha.</li>
+        <li><b>Sé Catedral</b> — ruínas da primeira catedral da África subsariana.</li>
+        <li><b>Convento de São Francisco</b> — convento histórico.</li>
+        <li><b>Igreja de Nossa Senhora do Rosário</b> — a igreja colonial mais antiga dos trópicos (séc. XV).</li>
+        <li><b>Rua Banana</b> — uma das ruas mais antigas da África subsariana.</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>🌆 Cidade da Praia</summary>
+    <div class="body">
+      <p class="muted">A Praia é uma cidade grande, com 125.000 habitantes, com mercados, restaurantes e vida noturna. Para mais detalhes, fale com a Sofia.</p>
+      <h3>Onde comer</h3>
+      <ul>
+        <li><b>Kaza Katxupa</b> — o único restaurante totalmente cabo-verdiano, da comida à decoração; prove a katxupa fresca ou guisada. Rua Pedonal, Plateau. <a href="https://maps.app.goo.gl/GQi7z8HkUuDTKBnSA">Mapa</a> · <a href="https://www.tripadvisor.com.br/Restaurant_Review-g293775-d15361388-Reviews-Kaza_Katxupa-Praia_Santiago.html">TripAdvisor</a></li>
+        <li><b>Café Sofia</b> — mais de 30 anos de história, no coração do Plateau; favorito de locais e turistas, <b>música ao vivo todas as noites</b> 🎵. <a href="https://maps.app.goo.gl/Ao2KSHYWav5kV5No9">Mapa</a> · <a href="https://www.facebook.com/cafesofia.restaurante/">Facebook</a></li>
+        <li><b>Titi Sushi Lounge</b> — sushi com o melhor atum do mundo, de Cabo Verde. Condomínio Ondas do Mar. <a href="https://www.tripadvisor.com.br/Restaurant_Review-g293775-d4004761-Reviews-Titi_Sushi_Lounge-Praia_Santiago.html">TripAdvisor</a></li>
+      </ul>
+      <h3>Zona de Kebra Kanela <a class="muted" href="https://maps.app.goo.gl/AgTVpta9wXLSPjxWA">(mapa)</a></h3>
+      <ul>
+        <li><b>Roma</b> — italiano, com vista para a praia de Kebra Kanela.</li>
+        <li><b>Orla</b> — pratos locais e internacionais; música ao vivo às sextas e sábados.</li>
+        <li><b>Seven</b> — ambiente moderno; dança do Batuque (tradicional de Santiago) às quintas.</li>
+        <li><b>Shopping Praia</b> — bancas de fast food e uma ótima padaria para um excelente pôr do sol.</li>
+      </ul>
+      <h3>Zona da Prainha</h3>
+      <ul><li><b>Linha de Água</b> — restaurante à beira-mar com vista deslumbrante; camas de praia para descansar. <a href="https://maps.app.goo.gl/rxzZT9A6ZdPXwrRE9">Mapa</a></li></ul>
+      <h3>Onde comprar</h3>
+      <ul>
+        <li><b>Mercado Plateau</b> — ideal para legumes, fruta e peixe. <a href="https://maps.app.goo.gl/NyXJtpcZPYaJG24s5">Mapa</a></li>
+        <li><b>Matilde</b> — tem de tudo a bom preço (Achada Santo António e Palmarejo). <a href="https://maps.app.goo.gl/A4j3PvZcVmpxc37H8">Mapa</a></li>
+        <li><b>Meu Super</b> — mais qualidade, produtos da marca Continente de Portugal. <a href="https://maps.app.goo.gl/pcpkv3ouXRaw7Qg38">Mapa</a></li>
+        <li><b>Boutique dos Congelados</b> — carnes e peixe importado, como salmão. <a href="https://maps.app.goo.gl/eYDiaMABQ2Cxaazd8">Mapa</a></li>
+        <li><b>Padaria Pão Quente</b> — padarias por toda a cidade da Praia. <a href="https://maps.app.goo.gl/sGCyA52H82fV8bqe7">Mapa</a></li>
+      </ul>
+      <h3>Praias</h3>
+      <ul>
+        <li><b>Kebra Kanela</b> — uma das praias mais procuradas da cidade da Praia. <a href="https://maps.app.goo.gl/fpGvtNFyv4oEEmqr9">Mapa</a></li>
+        <li><b>Prainha</b> — excelente restaurante e boas cadeiras de praia para alugar. <a href="https://maps.app.goo.gl/G3gt6bFuttVpp6Xy7">Mapa</a></li>
+      </ul>
+      <h3>Mercados</h3>
+      <ul>
+        <li><b>Sucupira</b> — um enorme mercado tipicamente africano: artesanato, roupa, comida, especiarias e ervas medicinais. <a href="https://maps.app.goo.gl/bmefEQ9X88YRFpGK8">Mapa</a></li>
+        <li><b>Mercado do Plateau</b> — cheiros e sabores vibrantes; comida bem caseira. <a href="https://maps.app.goo.gl/dzfKchRcL9kWVYNU8">Mapa</a></li>
+      </ul>
+      <h3>Museus & arte</h3>
+      <ul>
+        <li><b>Museu Amílcar Cabral</b> — dedicado à memória do lutador pela liberdade Amílcar Cabral (1924–73). <a href="https://maps.app.goo.gl/Mi3BHHrA6CDxnLfh9">Mapa</a></li>
+        <li><b>Rua D'Arte</b> — uma rua cheia de murais; o ambiente compete com os bairros mais alternativos de Berlim. <a href="https://maps.app.goo.gl/BYfsWnwKWLspsTaW8">Mapa</a></li>
+        <li><b>Pinturas Achada Grande</b> — obras de 35 artistas nacionais e 7 internacionais que estão a transformar o bairro. <i>Atenção: bairro com alguns problemas sociais — não se aventure demasiado.</i> <a href="https://maps.app.goo.gl/FcGavhAhD7Lry2dVA">Mapa</a> · <a href="https://www.agendacultural.cv/index.php?paginas=54&id_cod=126">Info</a></li>
+      </ul>
+      <h3>Vamos dançar?</h3>
+      <ul><li><b>Bar Alkimist</b> — todas as noites a partir das 23h. <a href="https://maps.app.goo.gl/Tc6qiUjsEFWggNVp8">Mapa</a></li></ul>
+    </div>
+  </details>
+  <details>
+    <summary>⛰️ Ilha de Santiago</summary>
+    <div class="body">
+      <h3>Praias</h3>
+      <ul>
+        <li><b>São Francisco</b> — bela praia a 15 km da cidade da Praia; sem restaurantes. No verão é possível ver tartarugas a desovar. <a href="https://maps.app.goo.gl/bRVzmjNFKi4CWywE6">Mapa</a></li>
+        <li><b>Praia Baixo</b> — praia agradável a 20 km da Praia; excelente restaurante Big Lanche. <a href="https://maps.app.goo.gl/GbVcAZB9aqrvYQP18">Mapa</a></li>
+        <li><b>Portinho</b> — abrigada, águas cristalinas e areia branca. Muito isolada — leve tudo o que precisar e tenha cuidado. <a href="https://maps.app.goo.gl/2BZDwjXnr7CMuiGu5">Mapa</a></li>
+        <li><b>Ribeira da Prata</b> — tranquila e pouco conhecida; águas calmas, sombra, ótima para piqueniques. <a href="https://maps.app.goo.gl/Loq6P6wRqJu7r3ZC9">Mapa</a></li>
+        <li><b>Porto da Ribeira da Barca</b> — vila piscatória autêntica com uma bela enseada, ótima para um passeio de barco. <a href="https://maps.app.goo.gl/zpp7r7UmyoKo4jrW9">Mapa</a></li>
+        <li><b>Tarrafal</b> — famosa praia de areia branca e águas cristalinas. Temos um Airbnb lá — e recomendamos muito o Restaurante Alto Mira. <a href="https://maps.app.goo.gl/iMS4tyGwTVFHJULXA">Mapa</a></li>
+      </ul>
+      <h3>Outros lugares</h3>
+      <ul>
+        <li><b>Cidade Velha</b> — vila Património da UNESCO, a 10 km da Praia. <a href="https://maps.app.goo.gl/iqN4Db8VtJ1LA7h1A">Mapa</a></li>
+        <li><b>São Domingos</b> — pequena vila do interior; prove o pastel de milho! <a href="https://maps.app.goo.gl/nFTDawMpePdEqYMq8">Mapa</a></li>
+        <li><b>Rui Vaz</b> — paisagens de montanha, alojamentos acolhedores, trilhos e um miradouro excelente para fotos. <a href="https://maps.app.goo.gl/MrAM3hXVMCP2aE1Z6">Mapa</a></li>
+        <li><b>São Jorge</b> — localidade pitoresca com igreja histórica e áreas de piquenique. <a href="https://maps.app.goo.gl/mNgQeWTS6KsQqMG38">Mapa</a></li>
+        <li><b>Assomada</b> — centro urbano importante com um mercado animado. Visite o mercado. <a href="https://maps.app.goo.gl/MBFRPsg2FXZzPHaR9">Mapa</a></li>
+        <li><b>Poilão</b> — a árvore mais antiga de Cabo Verde, numa pequena área de preservação natural. <a href="https://maps.app.goo.gl/LmqfJPny3vJjQZ3V6">Mapa</a></li>
+        <li><b>Serra Malagueta</b> — parque natural ideal para caminhadas, com trilhos marcados e vistas espetaculares. <a href="https://maps.app.goo.gl/9oDjrLYLunN9WAvUA">Mapa</a></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>🛥️ Visitar outras ilhas</summary>
+    <div class="body">
+      <ul>
+        <li><b>De barco:</b> Fogo e Maio — bilhetes na <a href="https://www.cvinterilhas.cv/buy">CV Interilhas</a></li>
+        <li><b>De avião:</b> todas as outras ilhas — bilhetes na <a href="https://www.caboverdeairlines.com/">Cabo Verde Airlines</a></li>
+        <li><b>Turismo de montanha:</b> Santo Antão, Fogo, São Nicolau</li>
+        <li><b>Turismo de praia:</b> Sal, Boavista, Maio</li>
+      </ul>
+      <p class="muted"><i>Temos recomendações de onde ficar e o que fazer em todas as ilhas — fale connosco!</i></p>
+    </div>
+  </details>
+</section>
+
+<footer>
+  <p>🌵 Casa Aloé Vera · Encosta Azul, Cidade Velha, Cabo Verde</p>
+  <p>Feito com <span class="heart">♥</span> pela Sofia & família — desejamos-lhe uma estadia maravilhosa!</p>
+</footer>
+</div>
+</div>
+
+<!-- ============ FRANÇAIS ============ -->
+<div class="lang-block" data-lang="fr" lang="fr" hidden>
+<header>
+  <div class="lang-top"><button onclick="setLang('pt')">PT</button><button onclick="setLang('en')">EN</button><button class="active" onclick="setLang('fr')">FR</button></div>
+  <div class="emoji">🌵</div>
+  <h1>Casa Aloé Vera</h1>
+  <p>Guide du Séjour · Encosta Azul, Cidade Velha · Cap-Vert</p>
+  <div class="hero-btns">
+    <a class="hero-btn" href="https://www.cidadevelha.org">🏠 Accueil · cidadevelha.org</a>
+    <a class="hero-btn wa" href="https://wa.me/2389813071">💬 Contacter Sofia sur WhatsApp</a>
+  </div>
+</header>
+
+<nav><div class="inner">
+  <a href="#wifi-fr">📶 WiFi</a>
+  <a href="#contacts-fr">☎️ Contacts</a>
+  <a href="#arrival-fr">📍 Arrivée</a>
+  <a href="#transport-fr">🚕 Transport</a>
+  <a href="#stay-fr">🏡 Votre Séjour</a>
+  <a href="#guides-fr">👋 Guides</a>
+  <a href="#money-fr">💶 Argent & SIM</a>
+  <a href="#explore-fr">🗺️ Explorer</a>
+</div></nav>
+
+<div class="wrap">
+
+<section id="wifi-fr">
+  <h2>📶 WiFi Gratuit</h2>
+  <div class="card wifi">
+    <div class="wifi-row"><div><span class="muted">Réseau</span><br><b>NETSOFIA</b></div><button class="copy" data-copy="NETSOFIA">Copier</button></div>
+    <div class="wifi-row"><div><span class="muted">Mot de passe</span><br><b>ABOEHBAKAM</b></div><button class="copy" data-copy="ABOEHBAKAM">Copier</button></div>
+    <div class="wifi-row"><div><span class="muted">Zone piscine · Encosta Azul Starlink</span><br><b>Cabo.Verde@2025</b></div><button class="copy" data-copy="Cabo.Verde@2025">Copier</button></div>
+  </div>
+</section>
+
+<section id="contacts-fr">
+  <h2>☎️ Nous sommes là pour vous aider</h2>
+  <div class="card">
+    <div class="contact"><div class="who"><b>Sofia</b><span>Votre hôte</span></div><div class="btns"><a class="btn wa" href="https://wa.me/2389813071">WhatsApp</a><a class="btn tel" href="tel:+2389813071">Appeler</a></div></div>
+    <div class="contact"><div class="who"><b>Sonia</b><span>Assistance, ménage et petit-déjeuner</span></div><div class="btns"><a class="btn wa" href="https://wa.me/2389354301">WhatsApp</a><a class="btn tel" href="tel:+2389354301">Appeler</a></div></div>
+    <div class="contact"><div class="who"><b>Jorge</b><span>Père de Sofia</span></div><div class="btns"><a class="btn wa" href="https://wa.me/2389912103">WhatsApp</a><a class="btn tel" href="tel:+2389912103">Appeler</a></div></div>
+    <div class="contact"><div class="who"><b>Kenedy</b><span>Taxi – Praia</span></div><div class="btns"><a class="btn wa" href="https://wa.me/2389230569">WhatsApp</a><a class="btn tel" href="tel:+2389230569">Appeler</a></div></div>
+    <div class="contact"><div class="who"><b>Kenedy</b><span>Taxi – Cidade Velha (même nom, personne différente 😄)</span></div><div class="btns"><a class="btn wa" href="https://wa.me/2389128261">WhatsApp</a><a class="btn tel" href="tel:+2389128261">Appeler</a></div></div>
+  </div>
+  <div class="card emergency">
+    <h3 style="margin-top:0">🆘 Urgences</h3>
+    <div class="contact"><div class="who"><b>Police</b></div><a class="btn tel num" href="tel:132">132</a></div>
+    <div class="contact"><div class="who"><b>Ambulance</b></div><a class="btn tel num" href="tel:123">123</a></div>
+    <div class="contact"><div class="who"><b>Poste de santé de Cidade Velha</b></div><a class="btn tel" href="tel:+2389864979">+238 986 49 79</a></div>
+  </div>
+</section>
+
+<section id="arrival-fr">
+  <h2>📍 Localisation & Arrivée</h2>
+  <div class="card">
+    <p><b>Google Maps :</b> cherchez <b>« Encosta Azul, Cidade Velha »</b></p>
+    <p style="margin-top:8px"><a class="btn map" href="https://www.google.com/maps/search/Encosta+Azul,+Cidade+Velha">Ouvrir dans Google Maps</a></p>
+    <h3>🚪 Portail – Colline de Salineiro</h3>
+    <ul>
+      <li>Le portail de la résidence se trouve sur la route de la colline de Salineiro, <b>sur le côté gauche</b>.</li>
+      <li>Le portail est manuel — il suffit de le faire glisser/pousser sur le côté.</li>
+      <li>Refermez-le toujours bien, pour la sécurité et pour empêcher les animaux d'entrer.</li>
+      <li>En taxi ? Dites au chauffeur : <b>« Colline de Salineiro — portail à gauche. »</b></li>
+      <li>Les deux chauffeurs Kenedy connaissent l'emplacement exact.</li>
+    </ul>
+    <h3>🧭 Comment trouver la maison</h3>
+    <figure><img class="photo" src="https://drive.google.com/thumbnail?id=1Hhh3uxpdJX5z0anotUgDIKUfBeTs-GpN&sz=w1200" alt="Plan guidé — comment arriver à la maison" loading="lazy"><figcaption>Plan guidé — comment arriver à la maison</figcaption></figure>
+    <figure><img class="photo" src="https://drive.google.com/thumbnail?id=135wHvFU6SMB3Oc8-qH99j9giSFisE-R3&sz=w1200" alt="Façade de la maison" loading="lazy"><figcaption>Façade de la maison — comparez avant d'entrer</figcaption></figure>
+    <div class="note">⚠️ La maison se trouve dans une <b>résidence privée</b> avec plusieurs maisons en pierre similaires. Comparez avec la photo pour être sûr d'être à la bonne maison — et écrivez-nous en cas de doute, c'est tout à fait normal de se tromper la première fois !</div>
+    <ul>
+      <li>Au Cap-Vert, les rues ont rarement des noms ou des panneaux visibles.</li>
+      <li>Un taxi ordinaire venant de Praia peut ne pas connaître cette résidence.</li>
+      <li>Pour éviter tout problème : utilisez l'adresse Google Maps, mentionnez la <b>colline de Salineiro</b> et, si possible, prenez l'un des chauffeurs Kenedy.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="transport-fr">
+  <h2>🚕 Se déplacer</h2>
+  <details>
+    <summary>🚐 Yace / « Colectivo » — minibus local</summary>
+    <div class="body">
+      <p>Un minibus Toyota Hiace — très économique et très utilisé par la population locale.</p>
+      <h3>Comment le prendre depuis la maison</h3>
+      <ul><li>Montez jusqu'à la route principale et placez-vous au coin de la rue.</li><li>Levez la main quand un Yace passe — ils s'arrêtent toujours.</li></ul>
+      <h3>Prix approximatifs</h3>
+      <div class="price-line"><span>Maison → Centre de Cidade Velha</span><b>50 CVE / 0,50 €</b></div>
+      <div class="price-line"><span>Cidade Velha → Praia (Sucupira)</span><b>100 CVE / 1 €</b></div>
+      <div class="price-line"><span>Praia → Tarrafal (uniquement depuis Praia)</span><b>1 000 CVE / 10 €</b></div>
+      <h3>Pour revenir à Cidade Velha — prenez-le à</h3>
+      <ul><li>Marché de Sucupira</li><li>Rond-point de Terra Branca</li><li>Rond-point de Palmarejo (Braz)</li></ul>
+      <p class="muted">Pas d'horaire fixe — il part quand il est plein. Plus fréquent en semaine, jusqu'à 18 h.</p>
+    </div>
+  </details>
+  <details>
+    <summary>🚖 Taxi — les deux Kenedy</summary>
+    <div class="body">
+      <div class="contact"><div class="who"><b>Kenedy – Praia</b></div><a class="btn wa" href="https://wa.me/2389230569">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Kenedy – Cidade Velha</b></div><a class="btn wa" href="https://wa.me/2389128261">WhatsApp</a></div>
+      <ul><li>Fiables, ils connaissent la résidence et le trajet exact jusqu'à la maison.</li><li>Disponibles jour et nuit. Aucune confusion de lieu ou de prix.</li></ul>
+      <h3>Prix moyens</h3>
+      <div class="price-line"><span>Maison → Centre de Cidade Velha</span><b>300 CVE / 3 €</b></div>
+      <div class="price-line"><span>Praia → n'importe quel quartier</span><b>150–300 CVE / 1,5–3 €</b></div>
+      <div class="price-line"><span>Aéroport → Praia</span><b>1 000–2 000 CVE / 10–20 €</b></div>
+      <div class="price-line"><span>Aéroport → Cidade Velha</span><b>2 500 (jour) / 3 000 CVE (nuit)</b></div>
+      <div class="price-line"><span>Aéroport → Tarrafal</span><b>6 000 (jour) / 8 000 CVE (nuit)</b></div>
+      <div class="note">⚠️ Les taxis de l'aéroport ont tendance à facturer plus cher — <b>négociez toujours à l'avance !</b> Si possible, appelez l'un des Kenedy.</div>
+    </div>
+  </details>
+  <details>
+    <summary>🚗 Location de voiture — fortement recommandée</summary>
+    <div class="body">
+      <p>Conduire au Cap-Vert est facile et sûr, et une voiture vous donne la liberté d'explorer l'île. À partir de <b>50 €/jour</b>.</p>
+      <h3>Contacts recommandés (WhatsApp)</h3>
+      <div class="contact"><div class="who"><b>Mario Amaro</b><span>De loin le plus recommandé — seulement 2 voitures</span></div><a class="btn wa" href="https://wa.me/2389530000">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Cipriano</b></div><a class="btn wa" href="https://wa.me/2389918902">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Kenedy – Praia</b><span>Loue aussi des voitures</span></div><a class="btn wa" href="https://wa.me/2389230569">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Miguel</b></div><a class="btn wa" href="https://wa.me/2385958876">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Hertz</b></div><a class="btn wa" href="https://wa.me/2389917907">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Fernando</b></div><a class="btn wa" href="https://wa.me/2389941393">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Marlon</b></div><a class="btn wa" href="https://wa.me/2389703359">WhatsApp</a></div>
+      <p class="muted">Faites aussi vos propres recherches — il y a beaucoup d'options de nos jours.</p>
+    </div>
+  </details>
+</section>
+
+<section id="stay-fr">
+  <h2>🏡 Votre Séjour</h2>
+  <details open>
+    <summary>🥖 Petit-déjeuner</summary>
+    <div class="body">
+      <ul>
+        <li>Servi du <b>lundi au samedi, de 8 h 15 à 10 h</b>, sur le balcon.</li>
+        <li>En général : café et/ou thé, pain, œufs, fruits, yaourt et jus.</li>
+        <li>Dites-nous si vous préférez le café ou le thé, et comment vous aimez vos œufs.</li>
+        <li>Merci de laisser la vaisselle dehors pour que nous puissions la récupérer.</li>
+      </ul>
+      <h3>Dimanches & jours fériés — panier petit-déjeuner</h3>
+      <ul><li>La veille au soir, nous laissons un plateau avec le nécessaire.</li><li>Les produits frais sont au réfrigérateur ; le pain est au congélateur.</li></ul>
+      <div class="tip">💡 <b>Astuce :</b> sortez le pain du congélateur 10 minutes avant de le manger — il sera frais. C'est la méthode que nous utilisons chaque jour, car il n'y a pas de boulangerie à Cidade Velha.</div>
+      <div class="note">🐶 Attention aux chiens et aux chats — ils ont tendance à voler la nourriture. Ne les nourrissez pas à table pour ne pas leur donner cette habitude.</div>
+      <p class="muted"><i>Des restrictions ou préférences alimentaires ? Dites-le-nous.</i></p>
+    </div>
+  </details>
+  <details>
+    <summary>💧 Eau & douche</summary>
+    <div class="body">
+      <ul><li>L'eau chaude est disponible <b>uniquement sous la douche</b>.</li><li>Une pompe électrique assure une bonne pression — si elle vous semble faible, dites-le-nous et nous réglons cela tout de suite.</li></ul>
+      <p class="muted"><i>Merci de prendre des douches rapides — l'eau est une ressource rare au Cap-Vert. 🙏</i></p>
+    </div>
+  </details>
+  <details>
+    <summary>🖐️ Départ & ménage</summary>
+    <div class="body">
+      <p><b>Le check-out est à 11 h.</b> <span class="muted">Besoin d'un départ tardif ? Contactez-nous à l'avance.</span></p>
+      <h3>Ménage</h3>
+      <ul><li>Deux fois par semaine pour les séjours de plus de 3 nuits, entre 10 h et midi.</li><li>Vous voulez des draps et serviettes propres ? Laissez-les par terre pour le signaler.</li></ul>
+    </div>
+  </details>
+  <details>
+    <summary>🧃 Mini-bar</summary>
+    <div class="body">
+      <p>Profitez de vos vacances — servez-vous ! À la fin de votre séjour, merci de <b>réapprovisionner</b> le mini-bar ou de <b>laisser de l'argent</b> pour couvrir le réassort.</p>
+      <table>
+        <tr><th>Article</th><th>Prix (unité)</th><th>Disponible</th></tr>
+        <tr><td>Eau 1,5 L</td><td>200 CVE / 2 €</td><td>3</td></tr>
+        <tr><td>Eau 5 L</td><td>400 CVE / 4 €</td><td>1</td></tr>
+        <tr><td>Bière</td><td>200 CVE / 2 €</td><td>6</td></tr>
+        <tr><td>Soda</td><td>200 CVE / 2 €</td><td>3</td></tr>
+        <tr><td>Jus</td><td>200 CVE / 2 €</td><td>3</td></tr>
+        <tr><td>Vin</td><td>1 500 CVE / 15 €</td><td>2</td></tr>
+      </table>
+    </div>
+  </details>
+  <details>
+    <summary>⛱️ Piscine, terrain de padel & espace commun</summary>
+    <div class="body">
+      <ul>
+        <li>La résidence dispose d'un espace commun avec piscine — profitez-en !</li>
+        <li>Restez connecté en nageant 😎 — WiFi : <b>Encosta Azul Starlink</b> / <b>Cabo.Verde@2025</b></li>
+        <li>Terrain de padel : <b>2 000 CVE / 20 € de l'heure</b> (raquettes et balles incluses).</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>👕 Linge · 🥩 Barbecue · 🚮 Poubelles</summary>
+    <div class="body">
+      <h3>Linge</h3>
+      <ul><li>Remettez votre linge dans un sac à Sonia, le matin.</li><li>Lavé en machine, séché au soleil, rendu en fin de journée.</li></ul>
+      <h3>Barbecue</h3>
+      <p>Devant la maison à droite, sous le grand arbre. <span class="muted"><i>Besoin d'accessoires ? Servez-vous.</i></span></p>
+      <h3>Poubelles</h3>
+      <ul><li>Ne laissez pas les ordures sur le patio — les chiens peuvent les atteindre.</li><li>Déposez-les dans le conteneur en face du terrain, à l'extérieur.</li></ul>
+      <p class="muted"><i>Évitez aussi de laisser vos affaires importantes à la portée des animaux — ils peuvent les prendre pour des jouets.</i></p>
+    </div>
+  </details>
+  <details>
+    <summary>🏘️ La Résidence Encosta Azul</summary>
+    <div class="body">
+      <ul>
+        <li>Une communauté calme, accueillante et sûre — certaines familles y vivent à l'année, quelques maisons sont des locations de vacances (comme Aloé Vera).</li>
+        <li><b>Sónia</b> est sur place tous les matins de <b>8 h à 13 h</b> pour vos questions. En dehors de ces horaires, écrivez-nous à tout moment.</li>
+        <li>Nous (Sofia, Ivan et Malik) sommes généralement là le week-end — venez dire bonjour ! <b>Snoopy</b>, notre chien marron, est très gentil et adore les enfants.</li>
+        <li><b>Jorge & Arlinda</b> (le père de Sofia) vivent dans la résidence et gèrent l'<b>Aparthotel Encosta Azul</b> à l'entrée. Vous pouvez réserver un petit-déjeuner ou un dîner chez eux — Arlinda cuisine de merveilleux plats maison <span class="muted">(pas de service de dîner en janvier et février)</span>.</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<section id="guides-fr">
+  <h2>👋 Guides Touristiques</h2>
+  <details>
+    <summary>👋 Guides pour excursions & visites — Île de Santiago</summary>
+    <div class="body">
+      <p>Nous recommandons ces guides pour des excursions sur l'île de Santiago — ils ont des bons plans et peuvent vous surprendre avec des lieux spectaculaires. Tous parlent anglais ou français.</p>
+      <div class="contact"><div class="who"><b>Kuka</b><span>Praia · De loin le plus recommandé — anglais parfait, voiture personnelle, excursions exceptionnelles et personnalisées · IG @kebrakanelabeach</span></div><a class="btn wa" href="https://wa.me/2389284287">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Silvio</b><span>Praia · « Discover Santiago Island » sur Facebook & Instagram</span></div><a class="btn wa" href="https://wa.me/2389162269">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Tuga Barros</b><span>Praia · IG tugabarros75</span></div><a class="btn wa" href="https://wa.me/2389847737">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Beny</b><span>Cidade Velha</span></div><a class="btn wa" href="https://wa.me/2389156427">WhatsApp</a></div>
+      <div class="contact"><div class="who"><b>Manecas</b><span>Tarrafal</span></div><a class="btn wa" href="https://wa.me/2389379666">WhatsApp</a></div>
+    </div>
+  </details>
+</section>
+
+<section id="money-fr">
+  <h2>💶 Argent & SIM</h2>
+  <details>
+    <summary>💲 Argent & paiements</summary>
+    <div class="body">
+      <p>L'escudo cap-verdien (CVE) a un <b>taux de change fixe</b> : 1 EUR = 110,265 CVE <span class="muted">(beaucoup d'endroits arrondissent à 1 EUR = 100 CVE)</span>.</p>
+      <ul>
+        <li>Changez de l'argent au bureau de change de l'aéroport ou dans les banques locales (frais de 3–5 €).</li>
+        <li>Des distributeurs partout sur l'île (frais selon votre banque).</li>
+        <li>La plupart des restaurants, cafés et boutiques acceptent les cartes internationales (VISA, Mastercard, Revolut, etc.).</li>
+        <li>Vous pouvez souvent payer en euros (1 EUR ≈ 100 CVE) ; la monnaie est rendue en CVE.</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>☎️ Carte SIM</summary>
+    <div class="body">
+      <p>À l'aéroport, après la récupération des bagages, le personnel d'<b>Alou</b> et d'<b>Unitel</b> propose des cartes SIM gratuites (les deux fonctionnent bien). Les forfaits data coûtent environ 10 € avec beaucoup de Go — internet au Cap-Vert est bon marché et fonctionne très bien. C'est une grande aide pour trouver son chemin et rester en contact.</p>
+    </div>
+  </details>
+</section>
+
+<section id="explore-fr">
+  <h2>🗺️ Explorer</h2>
+  <details>
+    <summary>🏛️ Cidade Velha — Patrimoine mondial de l'UNESCO</summary>
+    <div class="body">
+      <div class="tip">👉 Nous recommandons de visiter <a href="http://www.visitcidadevelha.cv/">visitcidadevelha.cv</a></div>
+      <h3>Où manger</h3>
+      <ul>
+        <li><b>Hotel Vulcão</b> — le dimanche : musique live & buffet, fréquenté par les familles de l'île de Fogo. Fortement recommandé. <a href="https://maps.app.goo.gl/94zcc3xLYA9bSeKJA">Carte</a> · <a href="https://www.hotelvulcao.cv/">Site</a></li>
+        <li><b>Restaurante Old City</b> — au centre, face à la mer ; poisson frais, pizza, carpaccio, pain à l'ail. <a href="https://maps.app.goo.gl/rRmmbkdxCZQN2oFu7">Carte</a></li>
+        <li><b>Restaurante Batuku</b> — dans la rue Banana, entouré de verdure ; cuisine merveilleuse <i>(prix un peu au-dessus de la moyenne)</i>. <a href="https://maps.app.goo.gl/r3LYkUrmcAb5Cy397">Carte</a></li>
+        <li><b>Doce Local de Coco</b> — près de la place du Pelourinho, Dona Fulu vend le meilleur bonbon à la noix de coco du monde. À ne pas manquer :)</li>
+      </ul>
+      <h3>Où faire ses courses</h3>
+      <ul>
+        <li><b>Mini Mercado Vlá</b> — près de la Sé Catedral ; le meilleur de la ville. <a href="https://maps.app.goo.gl/krpnybfXevBUvLn67">Carte</a></li>
+        <li><b>Mini Mercado Neti</b> — en plein centre du village, sur la rue principale. <a href="https://maps.app.goo.gl/sEpwbpomsq1Q3MqFA">Carte</a></li>
+      </ul>
+      <h3>Plages</h3>
+      <ul>
+        <li><b>Praia do Caniço</b> — ~1 km après l'Hotel Vulcão, sur la route principale ; idéale pour nager. <a href="https://maps.app.goo.gl/aivA3QyuhsCDMhrc8">Carte</a></li>
+        <li><b>Praia do Portinho</b> — au centre de la vieille ville ; location de stand-up paddle le week-end. <a href="https://maps.app.goo.gl/TVrbcABu8gz9UBEk8">Carte</a></li>
+      </ul>
+      <h3>Artisanat</h3>
+      <ul>
+        <li><b>Centro Cultural da Cidade Velha</b> — artisanat 100 % national.</li>
+        <li><b>Praça do Pelourinho</b> — un peu de tout : artisanat national, africain et souvenirs.</li>
+      </ul>
+      <h3>Monuments</h3>
+      <p class="muted">Patrimoine mondial de l'UNESCO depuis 2009 — le premier établissement colonial européen sous les tropiques. La plupart des monuments ferment à 17 h.</p>
+      <ul>
+        <li><b>Pelourinho</b> — le pilori sur la place de la ville.</li>
+        <li><b>Fortaleza Real de São Filipe</b> — vues panoramiques sur Cidade Velha.</li>
+        <li><b>Sé Catedral</b> — ruines de la première cathédrale d'Afrique subsaharienne.</li>
+        <li><b>Convento de São Francisco</b> — couvent historique.</li>
+        <li><b>Igreja de Nossa Senhora do Rosário</b> — la plus ancienne église coloniale des tropiques (XVe siècle).</li>
+        <li><b>Rua Banana</b> — l'une des plus anciennes rues d'Afrique subsaharienne.</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>🌆 Praia</summary>
+    <div class="body">
+      <p class="muted">Praia est une grande ville de 125 000 habitants, avec marchés, restaurants et vie nocturne. Pour plus de détails, demandez à Sofia.</p>
+      <h3>Où manger</h3>
+      <ul>
+        <li><b>Kaza Katxupa</b> — le seul restaurant entièrement cap-verdien, de la cuisine à la déco ; goûtez la katxupa fraîche ou sautée. Rua Pedonal, Plateau. <a href="https://maps.app.goo.gl/GQi7z8HkUuDTKBnSA">Carte</a> · <a href="https://www.tripadvisor.com.br/Restaurant_Review-g293775-d15361388-Reviews-Kaza_Katxupa-Praia_Santiago.html">TripAdvisor</a></li>
+        <li><b>Café Sofia</b> — plus de 30 ans d'histoire, au cœur du Plateau ; un favori des locaux et des touristes, <b>musique live tous les soirs</b> 🎵. <a href="https://maps.app.goo.gl/Ao2KSHYWav5kV5No9">Carte</a> · <a href="https://www.facebook.com/cafesofia.restaurante/">Facebook</a></li>
+        <li><b>Titi Sushi Lounge</b> — des sushis avec le meilleur thon du monde, du Cap-Vert. Résidence Ondas do Mar. <a href="https://www.tripadvisor.com.br/Restaurant_Review-g293775-d4004761-Reviews-Titi_Sushi_Lounge-Praia_Santiago.html">TripAdvisor</a></li>
+      </ul>
+      <h3>Quartier de Kebra Kanela <a class="muted" href="https://maps.app.goo.gl/AgTVpta9wXLSPjxWA">(carte)</a></h3>
+      <ul>
+        <li><b>Roma</b> — italien, avec vue sur la plage de Kebra Kanela.</li>
+        <li><b>Orla</b> — plats locaux et internationaux ; musique live les vendredis et samedis.</li>
+        <li><b>Seven</b> — cadre moderne ; danse Batuque (tradition de Santiago) le jeudi.</li>
+        <li><b>Shopping Praia</b> — stands de restauration rapide et une très bonne boulangerie pour un superbe coucher de soleil.</li>
+      </ul>
+      <h3>Quartier de Prainha</h3>
+      <ul><li><b>Linha de Água</b> — restaurant en bord de mer avec vue splendide ; transats pour se reposer. <a href="https://maps.app.goo.gl/rxzZT9A6ZdPXwrRE9">Carte</a></li></ul>
+      <h3>Où faire ses courses</h3>
+      <ul>
+        <li><b>Mercado Plateau</b> — idéal pour les légumes, fruits et poissons. <a href="https://maps.app.goo.gl/NyXJtpcZPYaJG24s5">Carte</a></li>
+        <li><b>Matilde</b> — de tout à bon prix (Achada Santo António & Palmarejo). <a href="https://maps.app.goo.gl/A4j3PvZcVmpxc37H8">Carte</a></li>
+        <li><b>Meu Super</b> — meilleure qualité, produits portugais de la marque Continente. <a href="https://maps.app.goo.gl/pcpkv3ouXRaw7Qg38">Carte</a></li>
+        <li><b>Boutique dos Congelados</b> — viandes et poissons importés comme le saumon. <a href="https://maps.app.goo.gl/eYDiaMABQ2Cxaazd8">Carte</a></li>
+        <li><b>Padaria Pão Quente</b> — des boulangeries dans toute la ville. <a href="https://maps.app.goo.gl/sGCyA52H82fV8bqe7">Carte</a></li>
+      </ul>
+      <h3>Plages</h3>
+      <ul>
+        <li><b>Kebra Kanela</b> — l'une des plages les plus prisées de Praia. <a href="https://maps.app.goo.gl/fpGvtNFyv4oEEmqr9">Carte</a></li>
+        <li><b>Prainha</b> — excellent restaurant et jolis transats à louer. <a href="https://maps.app.goo.gl/G3gt6bFuttVpp6Xy7">Carte</a></li>
+      </ul>
+      <h3>Marchés</h3>
+      <ul>
+        <li><b>Sucupira</b> — un immense marché typiquement africain : artisanat, vêtements, nourriture, épices, herbes médicinales. <a href="https://maps.app.goo.gl/bmefEQ9X88YRFpGK8">Carte</a></li>
+        <li><b>Mercado do Plateau</b> — odeurs et saveurs vibrantes ; cuisine très familiale. <a href="https://maps.app.goo.gl/dzfKchRcL9kWVYNU8">Carte</a></li>
+      </ul>
+      <h3>Musées & art</h3>
+      <ul>
+        <li><b>Museu Amílcar Cabral</b> — dédié à la mémoire du combattant de la liberté Amílcar Cabral (1924–73). <a href="https://maps.app.goo.gl/Mi3BHHrA6CDxnLfh9">Carte</a></li>
+        <li><b>Rua D'Arte</b> — une rue couverte de fresques ; l'ambiance rivalise avec les quartiers branchés de Berlin. <a href="https://maps.app.goo.gl/BYfsWnwKWLspsTaW8">Carte</a></li>
+        <li><b>Pinturas Achada Grande</b> — œuvres de 35 artistes nationaux et 7 internationaux qui transforment le quartier. <i>Attention : quartier avec quelques problèmes sociaux — ne vous aventurez pas trop loin.</i> <a href="https://maps.app.goo.gl/FcGavhAhD7Lry2dVA">Carte</a> · <a href="https://www.agendacultural.cv/index.php?paginas=54&id_cod=126">Infos</a></li>
+      </ul>
+      <h3>On danse ?</h3>
+      <ul><li><b>Bar Alkimist</b> — tous les soirs à partir de 23 h. <a href="https://maps.app.goo.gl/Tc6qiUjsEFWggNVp8">Carte</a></li></ul>
+    </div>
+  </details>
+  <details>
+    <summary>⛰️ Île de Santiago</summary>
+    <div class="body">
+      <h3>Plages</h3>
+      <ul>
+        <li><b>São Francisco</b> — belle plage à 15 km de Praia ; pas de restaurants. En été, on peut voir des tortues pondre. <a href="https://maps.app.goo.gl/bRVzmjNFKi4CWywE6">Carte</a></li>
+        <li><b>Praia Baixo</b> — plage agréable à 20 km de Praia ; excellent restaurant Big Lanche. <a href="https://maps.app.goo.gl/GbVcAZB9aqrvYQP18">Carte</a></li>
+        <li><b>Portinho</b> — abritée, eaux cristallines, sable blanc. Très isolée — prenez le nécessaire et soyez prudent. <a href="https://maps.app.goo.gl/2BZDwjXnr7CMuiGu5">Carte</a></li>
+        <li><b>Ribeira da Prata</b> — tranquille et méconnue ; eaux calmes, ombre, idéale pour les pique-niques. <a href="https://maps.app.goo.gl/Loq6P6wRqJu7r3ZC9">Carte</a></li>
+        <li><b>Porto da Ribeira da Barca</b> — village de pêcheurs authentique avec une belle crique, parfait pour une sortie en bateau. <a href="https://maps.app.goo.gl/zpp7r7UmyoKo4jrW9">Carte</a></li>
+        <li><b>Tarrafal</b> — célèbre plage de sable blanc aux eaux cristallines. Nous y avons un Airbnb — et recommandons vivement le restaurant Alto Mira. <a href="https://maps.app.goo.gl/iMS4tyGwTVFHJULXA">Carte</a></li>
+      </ul>
+      <h3>Autres lieux</h3>
+      <ul>
+        <li><b>Cidade Velha</b> — ville classée UNESCO, à 10 km de Praia. <a href="https://maps.app.goo.gl/iqN4Db8VtJ1LA7h1A">Carte</a></li>
+        <li><b>São Domingos</b> — petite ville de l'intérieur ; goûtez le pastel de maïs ! <a href="https://maps.app.goo.gl/nFTDawMpePdEqYMq8">Carte</a></li>
+        <li><b>Rui Vaz</b> — paysages de montagne, gîtes accueillants, sentiers de randonnée et un superbe belvédère. <a href="https://maps.app.goo.gl/MrAM3hXVMCP2aE1Z6">Carte</a></li>
+        <li><b>São Jorge</b> — localité pittoresque avec église historique et aires de pique-nique. <a href="https://maps.app.goo.gl/mNgQeWTS6KsQqMG38">Carte</a></li>
+        <li><b>Assomada</b> — centre urbain important au marché animé. Visitez le marché. <a href="https://maps.app.goo.gl/MBFRPsg2FXZzPHaR9">Carte</a></li>
+        <li><b>Poilão</b> — l'arbre le plus ancien du Cap-Vert, dans une petite réserve naturelle. <a href="https://maps.app.goo.gl/LmqfJPny3vJjQZ3V6">Carte</a></li>
+        <li><b>Serra Malagueta</b> — parc naturel idéal pour la randonnée, sentiers balisés et vues spectaculaires. <a href="https://maps.app.goo.gl/9oDjrLYLunN9WAvUA">Carte</a></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>🛥️ Visiter les autres îles</summary>
+    <div class="body">
+      <ul>
+        <li><b>En bateau :</b> Fogo et Maio — billets sur <a href="https://www.cvinterilhas.cv/buy">CV Interilhas</a></li>
+        <li><b>En avion :</b> toutes les autres îles — billets sur <a href="https://www.caboverdeairlines.com/">Cabo Verde Airlines</a></li>
+        <li><b>Tourisme de montagne :</b> Santo Antão, Fogo, São Nicolau</li>
+        <li><b>Tourisme balnéaire :</b> Sal, Boavista, Maio</li>
+      </ul>
+      <p class="muted"><i>Nous avons des recommandations d'hébergement et d'activités pour toutes les îles — parlez-nous !</i></p>
+    </div>
+  </details>
+</section>
+
+<footer>
+  <p>🌵 Casa Aloé Vera · Encosta Azul, Cidade Velha, Cap-Vert</p>
+  <p>Fait avec <span class="heart">♥</span> par Sofia & sa famille — nous vous souhaitons un merveilleux séjour !</p>
+</footer>
+</div>
+</div>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.lang-block').forEach(function(b){ b.hidden = (b.dataset.lang !== l); });
+  document.querySelectorAll('.lang-top button').forEach(function(btn){
+    btn.classList.toggle('active', btn.textContent.toLowerCase() === l);
+  });
+  try{ localStorage.setItem('aloe-lang', l); }catch(e){}
+  window.scrollTo(0,0);
+}
+(function(){
+  var l = new URLSearchParams(location.search).get('lang');
+  if(!l){ try{ l = localStorage.getItem('aloe-lang'); }catch(e){} }
+  if(!l){
+    var nav = (navigator.language||'en').slice(0,2);
+    l = (nav==='pt'||nav==='fr') ? nav : 'en';
+  }
+  if(['pt','en','fr'].indexOf(l) === -1) l = 'en';
+  setLang(l);
+})();
+document.addEventListener('click', function(e){
+  var btn = e.target.closest('.copy');
+  if(!btn) return;
+  navigator.clipboard.writeText(btn.dataset.copy).then(function(){
+    var t = btn.textContent; btn.textContent = '✓';
+    setTimeout(function(){ btn.textContent = t; }, 1500);
+  });
+});
+</script>
+</body>
+</html>
