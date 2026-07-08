@@ -1303,6 +1303,7 @@ function setLang(l){
   if(!l || ['pt','en','fr'].indexOf(l) === -1) l = 'en';
   setLang(l);
 })();
+document.querySelectorAll('a[href^="http"]').forEach(function(a){ a.target='_blank'; a.rel='noopener'; });
 document.addEventListener('click', function(e){
   var btn = e.target.closest('.copy');
   if(!btn) return;
